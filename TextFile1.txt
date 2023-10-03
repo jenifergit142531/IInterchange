@@ -1,0 +1,44 @@
+
+
+
+Agenda :
+
+- Software development methodology
+- Agile
+- Scrum
+- Boards
+* Azure Board
+* Jira
+* Trello
+
+SDLC : Software development life cycle
+
+1.waterfall
+2.Spiral
+3.Big bang 
+and many more
+
+Agile Methodology :
+
+- Software methodology / Principles to develop the software 
+- Efficient one
+- Agile (12 principles) - creating most viable product
+* Scrum
+* XP (Extreme programming)
+
+- Project is divided into smaller units
+* Epic
+* user story 
+* feature 
+'
+Scrum meeting :
+
+- Daily scrum
+- 15 mins
+- Entire team (Cross functional team - scrum master,develop,tester)
+
+- SQL 
+* Introduction
+* DDL
+* DML
+* DQL
