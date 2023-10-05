@@ -1,0 +1,82 @@
+
+
+Agenda :
+
+- Key Constraint
+- Joins
+- Subquery
+- Indexing
+
+
+Join :
+
+- Combining one or more columns from multiple tables
+- Types 
+
+1.Inner Join 
+2.Full Join
+3.Left Join
+4.Right Join
+
+
+- Key constraint : Uniquely identify the data 
+
+Primary key : 
+
+* Usually integer values(eg :id)
+* You can have one primary key in a table
+* Uniquely identify the value in the column
+* Easy and quicker to search the value
+* Does not accept null value
+
+Foreign Key 
+
+* Primary key of one table is the foreign key in another table 
+* accept null values
+
+Join
+Syntax:
+
+
+select <col1,col2,col3.....>
+from table1
+inner join
+table2
+on <condition>
+
+subquery syntax:
+
+select <colname....>
+from tablename
+where colname expression 
+(select coln from table where <condition>)
+
+Indexing :
+
+- search optimization
+- data stored in some order
+
+Types :
+
+1.clustered
+
+* Physical sorting of data
+* only one clustered index / table
+* eg : eid,pid ...
+* primary key creates clustered index
+
+2.non - clustered 
+
+  * logical sorting of data
+  * 0- 999 non clustered index in a table
+  * eg :email,phone no
+  * unique key creates non clustered index
+
+
+  syntax :
+
+  create clustered index <name>
+  on table (column)
+
+
+
