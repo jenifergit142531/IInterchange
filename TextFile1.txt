@@ -1,0 +1,62 @@
+
+
+
+Topics to revisit :
+
+- Self join
+- Non clustered index
+
+Agenda :
+
+- Stored procedure
+- Functions
+
+Stored Procedure :
+
+- set a sql statements that is compiled and stored
+- Brings efficiency to your code
+- create / alter
+- dml queries
+- result the output (out parameter)
+- call a function inside stored procedure
+- Stored procedure can be encrypt
+- Exec keyword
+
+Types :
+
+- User defined procedure
+- System procedure 
+
+Functions :
+
+- Set of sql statements executed and stored in a result set
+- Not so efficient like stored procedure
+- select query
+- returns a value
+- select keyword
+
+Types :
+
+1.Scalar function
+* return only one value
+
+
+2.Table valued function
+* return table
+
+
+Syntax :
+
+Create procedure <procedurename>
+//paramaters declaration
+as
+begin
+// dml query
+end
+
+
+
+
+
+
+
