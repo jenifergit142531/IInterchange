@@ -1,0 +1,84 @@
+
+
+Agenda :
+
+- Stored procedures
+* Looping
+* Cursor
+
+- Functions
+* Scalar functions
+* Table valued function
+
+
+Recap :
+
+- sp_help
+- sp_helptext
+- "with encryption"
+- Exception handling(try...catch) 
+- if...else
+
+
+Datatype : varbinary(max)
+
+Cursor :
+
+- Database object that enables traversal over the rows in a result set.
+- Allows us to process the individual row returned by the query
+
+Syntax :
+
+Declare <cursorname> CURSOR
+for <statements>
+
+
+cursor : first to last (forward traversing)
+cursor scroll : last to first ( backward traversing)
+
+deallocate : removes the references to the cursor 
+
+Functions :
+
+- sql statements that perform some tasks
+- return a single values or multiple values
+
+Types :
+
+* Built in functions
+
+- Aggregate function , ranking functions
+
+* User defined function
+
+1.Scalar - single values
+2.Table valued function - multiple values
+
+
+Syntax :
+
+Create function <functionname>
+returns <datatype>
+as
+begin
+//function statement
+return <value>
+end
+
+Ranking functions :
+
+- specify the rank for the fields
+- Also called as window functions
+
+Types :
+
+- Dense_rank()
+- rank()
+- row_number()
+- ntile()
+
+
+
+
+
+
