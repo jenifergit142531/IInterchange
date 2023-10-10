@@ -1,0 +1,67 @@
+
+
+
+Agenda :
+
+- Trigger
+- Views
+
+
+Trigger :
+
+- database object that is executed automatically when an EVENT occurs in the database
+
+- event : activity , action 
+
+- virtual tables - INSERTED , DELETED 
+
+Types :
+
+1.DML Trigger - Triggers created on table - insert , delete , update
+
+2.DDL Trigger - Trigger created on database - create , alter , drop
+
+Syntax :
+
+create trigger <triggername>
+on
+<tablename>
+{FOR | AFTER | INSTEAD OF} //CLAUSES
+{INSERT , UPDATE , DELETE }
+AS
+<SQL STATEMENT>
+
+INSERTED TABLE :
+
+- Holds the new rows to be inserted during an INSERT / UPDATE event 
+
+DELETED TABLE :
+
+- Holds the data during the DELETE / UPDATE
+
+LOGON TRIGGER :
+
+They are DDL trigger but created at server level
+
+- track the login activity 
+
+VIEWS :
+
+- Virtual table whose values are defined by the query
+
+create view <viewname>
+as
+<select query>
+
+after trigger can be applied on view
+
+
+
+
+
+
+
+
+
+
+
