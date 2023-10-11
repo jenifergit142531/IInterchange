@@ -1,0 +1,52 @@
+
+
+Agenda :
+
+- Transaction
+
+* Unit of work that is performed in the database
+* sequence of work is accomplished in a logical order
+* Eg : Online food delivery -- swiggy , zomato,zepto...
+
+inconsistency of data :
+
+user ---> request(adding items to cart)
+user ----> initiate payment(zepto)----->wallet(upi - phonepy,gpay...)
+user <-----wait(zepto to confirm)<-----wallet
+user<-----wallet(debited)
+
+
+money debited , order not confirmed ===> bad transaction  , complete failure(reert the money back to the user)
+money debited , order confirmed => successful transaction
+
+Properties of transaction : ACID   ==> Good transaction
+
+1.Atomicity - ensures all work is done or none is done
+
+2.Consistency - ensures db changes states upon successful transaction
+
+3.Isolation - all transaction should be independent of each other
+
+4.Durability - ensures the result of commited transaction persist in case of any failure
+
+Types :
+
+- Autocommit transaction - default one
+- Implicit : start the transaction and end the transaction with commit / rollback
+- Explicit : starting and ending for the transaction
+
+
+Locks 
+
+- Exclusive lock
+- shared lock
+- update lock
+- intent lock
+- schema lock
+- bulk update lock
+
+* can be applied row ,database,table,page
+
+
+
+
