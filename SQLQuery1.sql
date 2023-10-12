@@ -119,6 +119,12 @@ select count(*) from pro
 commit transaction
 
 
+begin transaction
+update pro set quantity=30 where id=1001
+waitfor delay '00:00:15'
+select * from pro
+commit transaction
+
 
 
 

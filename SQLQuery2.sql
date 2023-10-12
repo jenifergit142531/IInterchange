@@ -60,3 +60,11 @@ commit transaction
 delete from pro where id between 1004 and 1111
 
 select * from pro
+
+alter database inter
+set allow_snapshot_isolation on 
+begin transaction
+update pro set quantity=40 where id=1001
+select * from pro
+commit transaction
+
