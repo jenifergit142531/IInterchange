@@ -1,0 +1,132 @@
+
+
+
+Agenda :
+
+
+
+- implicit : no begin transaction(set implicit transaction ON)......commit / rollback
+
+- Explicit : Start with begin transaction ......commit / rollback
+
+
+- Concurrency problem
+
+
+What is concurrency ?
+
+- multiple user trying to access the same data / info at the same time
+
+
+Problems:
+
+- Dirty read
+- Lost updates
+- Non-Repeatable read
+- Phantom reads 
+
+How to overcome the problem ??
+
+Isolation level :
+
+1.Read uncommitted
+2.Read committed
+3.Repeatable read
+4.snapshot
+5.Serialization
+
+Problem 1 :Dirty read
+
+- one transaction allow the other transaction to read the uncommitted data
+- Like insert / update / delete in the table but not commited/rollback
+
+solution :
+
+set transaction isolation level read committed
+
+
+Problem 2 : Lost Update 
+
+Transaction 1:
+
+read quantity = 10
+
+sell 1 mobile 
+
+read quantity = 9
+
+
+Transaction 2:
+
+read quantity = 10
+
+sell 2 mobiles
+
+read quantity = 8
+
+Solution :
+
+Repeatable read
+
+Problem 3 : Non Repeatable read 
+
+when one transaction reads the same data twice while another transaction updates the data between first and second read
+
+Transaction 1 :
+
+read1 the product quantity for mobile = 6
+
+doing someother activity
+
+read2 the quantity = 3
+
+
+Transaction 2:
+
+updates the quantity to 3
+
+
+solution :
+
+- Repeatable read
+
+
+
+Problem 4 : Phantom read
+
+- When one transaction executes the query twice ==> different resultset
+
+
+Solution :
+
+Serializable
+
+Transaction 1 :
+
+read quantity select * from pro => 3
+
+-- some activity 
+
+read quantity select * from pro => 4
+
+
+Transaction 2 :
+
+Inserted 1 row in the pro table
+
+
+Solution :
+
+Serializable
+
+
+-- Snapshot
+
+maintains seperate version / copy of the db
+
+
+
+
+
+
+
