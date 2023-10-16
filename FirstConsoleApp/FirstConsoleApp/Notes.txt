@@ -1,0 +1,175 @@
+﻿
+Agenda :
+
+- Introduction to .Net
+- Introduction to c#
+- Structure of C# Code
+- Data types
+- Variables
+- Comment line statements
+- Type Casting
+- Namespace
+- Access modifiers
+- Read & write statements
+- Assembly
+- Functions
+
+NET :
+
+- Framework(Platform) to develop application
+- Multiple programming languages
+- c#,f#,vb,c++..
+- SDK
+- Software development Kit
+(Tool,libraries,language,package)
+
+CLR :
+Common language runtime
+Exception handling,Memory management,type safety
+
+
+Managed code : Languages that is written in .net language
+* supported by CLR (Common Language Runtime)
+* c#,f#,vb
+
+Unmanaged code : Code developed outside of .Net
+* Not supported CLR
+*c,c++
+
+
+Translators:(Convert source code --> machine code)
+
+1.Compiler : Scan your whole program and convert it to Machine code
+
+2. Interpreter : Scan each and every line and then convert to MC
+
+- JIT (Just in time compiler)
+- Roslyn compiler
+
+BCL - Base class library
+
+- Building block of .Net program 
+
+Memory Management :
+
+- 2 kinds of storage in .Net
+
+1.Heap memory : Object type
+2.Stack memory : Value type 
+
+Structure of C# Code :
+
+- Using System => default namespace
+- Main() => Entry point of your application
+- class = defines the code inside class
+
+
+Namespace : Container to hold multiple classes / libraries.
+
+Read : Console.ReadLine() - Read the input
+
+Write : Console.WriteLine() - Write the content on the screen
+
+Comment line statements :
+
+statements that are ignorned by the compiler
+For better understanding
+
+Types :
+
+//   single line
+/*...*/ Multiline comment
+
+Data types:
+
+Value types :
+
+- Predefined / simple types
+
+int - Stores numeric values (10,30,,,,,) 
+double - Decimal values(12.34.45,67....)
+char - single character('a','z'...)
+string - stores text ("hello" , "hi"...)
+bool - stores states(true/false)
+
+Default type : string
+
+Var -  c# 3.0 - resolve the datatype at compile time
+Dynamic - c#4.5 - resolve the datatype at run time
+
+- Enum
+- struct
+- Nullable
+
+Pointer type: * ,& 
+
+Reference Types:
+
+- Class
+- Delegates
+- Interface
+- arrays
+
+
+Data binding :
+
++ : To concat the string and the value
+{} : Format string (bind multiple values)
+
+Variable:
+
+Memory location that stores the values 
+
+Declare :
+
+<datatype> variablename;
+int a;
+
+
+Initialize :
+
+<datatype> variablename =value;
+int a=10;
+
+
+Naming convention :
+
+- Start with a alphabet
+- do not start with special characters
+- _ : Can be used
+- Should not be a reserved keywords if,while,const,..
+- use digits 0 -9 but not at the beginning
+
+
+
+Access modifier :
+
+- public - accessed by another class / outside the scope
+- private - accessed inside the declared block / local scope
+- protected - accessed by the inherited classes
+- internal - inside the same assembly
+- protected internal - internal + protected 
+
+
+Assembly :output product of the execution 
+
+- .exe : executable file(stand alone files)
+- .dll : Dynamic link library (dependent on other applications)
+
+constants :
+
+
+Functions :
+
+- perform a set of task
+- Repeated statements in the program ---> create function and call whenever required
+
+C# Call by Value - refer to the original value , 
+Any change made to the value will not affect the original value.
+
+C# Call by reference - Refer to the memory address of the variable;
+Any change made to the value will change the original value.
+
+C# Out parameter - Output parameter 
+
+* Its like reference type but does not require initialization 
