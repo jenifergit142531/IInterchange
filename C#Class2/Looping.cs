@@ -11,23 +11,31 @@ namespace C_Class2
 
         public static void BC()
         {
-            char choice;
-            for(int i=0;i<10;i++)
+            try
             {
-                if (i == 4)
+                char choice;
+                for (int i = 0; i < 10; i++)
                 {
-                    Console.WriteLine("Would you like to continue ? Y / N");
-                    choice = Convert.ToChar(Console.ReadLine());
-                    if (choice == 'Y' )
-                        continue;
-                    else if (choice == 'N')
+                    if (i == 4)
+                    {
+                        Console.WriteLine("Would you like to continue ? Y / N");
+                        choice = Convert.ToChar(Console.ReadLine());
+                        if (choice == 'Y')
+                            continue;
+                        else if (choice == 'N')
+                            break;
+                        else
+                            Console.WriteLine("You have entered invalid choice");
                         break;
-                    else
-                        Console.WriteLine("You have entered invalid choice");
-                    break;
+                    }
+                    Console.WriteLine(i);
                 }
-                Console.WriteLine(i);
             }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
         public static void fibonacci()
         {

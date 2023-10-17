@@ -51,8 +51,10 @@ class Program
     }
       public static void Main()
     {
+        Except.CheckVolume();
+        //Except.divide();
         // Looping.fibonacci();
-        Looping.BC();
+       //Looping.BC();
 
         //Conditional.BigBillionDays();
         //Conditional.MonsoonSale();

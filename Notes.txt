@@ -107,3 +107,31 @@ do
 //execute the code
 } 
 while(cond)
+
+Break : Exit the statements
+Continue : Continue the execution until the condition is met
+
+
+Exception :
+
+- When your code shows uncertainity / problem 
+
+Error : Happens at compile time 
+
+Exception : uncertainty happens in your code at runtime.
+
+Exception handling :
+
+Try : contain the set of statements that needs to be checked for error
+Catch : handle the exception
+finally : Exception occurs or not (close the resources opened during the execution)
+throw : throw the exception out of the method 
+
+
+Types :
+
+System.Exception
+User defined exception
+
+Exception => Root interface 
+
