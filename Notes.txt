@@ -1,0 +1,109 @@
+
+Recap :
+
+.Net - Framework / Platform to create application
+*SDK (tools,libraries,packages)
+
+C# - Most popular programming language in .Net to build applications
+
+Agenda :
+
+- Enum
+- Struct
+- Nullable type
+- Type conversion
+- Conditional Construct
+
+1.If...else
+-> evaluate a condition 
+-> if the condition is true , if block will execute
+-> if the condition is false , else block will execute
+
+
+
+2.Switch
+
+- evaluate multiple conditions
+
+switch(condition)
+{
+case <cond1>:
+//some stms
+break;
+.......
+case <condn>:
+//some stms
+break;
+
+default:
+break;
+
+}
+
+
+- Looping Statements
+1.For
+2.While
+3.do...While
+
+- Break and continue
+- Exception
+
+Enum : Enumeration
+
+- Assign the integer value to the names
+- Indexing the value
+
+enum <enumname>
+{
+//code
+}
+
+Struct :
+- Value type
+- Hold small data values
+- Include fields  / properties / operators
+- Cannot use inheritance,abstract,sealed,virtual
+
+Nullable Type :
+
+- Allows us to assign null to value type
+- supports HasValue that check for null value or not
+- ' ? ' - symbol is a shorthand representation of nullable type
+- '??' - assign the nullable type to non nullable value
+
+Type Casting : Convert from one DT to another DT
+
+1.Implicit conversion ( short to int)
+2.Explicit convertion (Double to int)
+
+Boxing : value type to object type
+
+Unboxing : object type to value type
+
+Looping Statements :
+
+- when a set of statements executed repeatedly for N number of times
+- DRY - Do not repeat yourself
+
+1.For Loop : execute for specified number of times
+
+for(initialzation;Condition;increment/decrement)
+{
+//code executes
+}
+
+
+2.While : execute the loop for N times until condition becomes false
+while(condition)
+{
+//execute the code
+}
+
+
+3.do...while : Excutes atleast once before checking the condition
+do
+{
+//execute the code
+} 
+while(cond)
