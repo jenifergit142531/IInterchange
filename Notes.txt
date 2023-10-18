@@ -1,0 +1,94 @@
+
+
+
+Agenda :
+
+- Object Oriented Programming
+- Object
+- Class
+- Encapsulation(Access modifiers)
+- Abstraction
+* Abstract class
+* Interface
+- Inheritance(Types)
+- Polymorphism
+* Method Overloading
+* Method Overriding
+- Constructor
+- Destructor
+- Static vs Non static
+
+Introduction :
+
+- Modular programming
+- Follows design principles
+- Keep it simple and structured
+
+Object : Real time entity
+
+Eg : Car
+
+- Properties,behaviour,identity
+
+Properties : color,name,brand
+behaviour : drive
+identity : Chasenumber,Rc number
+
+
+Class:Blueprint of the object
+
+- collection of objects
+- Vehicles
+
+Encapsulation : Binding of data + function together in single unit
+How ??
+
+- Access modifiers => Public,private,protected
+
+Abstraction : Hiding the background info and providing the necessary details
+
+Inheritance : Acquiring properties and behaviour from another class
+
+Parent class :Base class
+
+Child class : Derived class
+
+Types :
+
+1.Single inheritance ( 1bc ---> 1 dc)
+2.Multilevel inheritance ( 1bc ----> 1 dc(bc)---> 2dc)
+3.Hierarchial ( 1 bc---> dc1,dc2,...)  vehicle --> car ---> ford,lexus
+4.We do not support Multiple inheritance
+1bc , 2 bc ----> 1 dc
+Why ??
+- allow duplication
+- WE can achive the same concept using interface
+5.Hybrid inheritance - combination of 1 or more inheritance
+
+
+vehicle ---> car ,bike
+
+Polymorphism: Many + Forms 
+
+Eg : Hoomans 
+Mobile Phone
+
+Abstraction =?> only necessary info
+
+1.Abstract class :
+- These are classes that will have abstract method
+- class must be prefixed with abstract keyword
+- Abstract class contains 
+
+1.Abstract method => method with no implementation
+2.Concrete method =>method  that has implementation
+
+- Abstract methods are inherited and implemented by child classes
+- You cannot create instance / object for the abstract class
+
+
+
+2.Interface
+
+
+
