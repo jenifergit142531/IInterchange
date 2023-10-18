@@ -76,6 +76,7 @@ Mobile Phone
 Abstraction =?> only necessary info
 
 1.Abstract class :
+
 - These are classes that will have abstract method
 - class must be prefixed with abstract keyword
 - Abstract class contains 
@@ -86,9 +87,19 @@ Abstraction =?> only necessary info
 - Abstract methods are inherited and implemented by child classes
 - You cannot create instance / object for the abstract class
 
+* Virtual functions :
 
+- Virtual fuctions have their own implementation
+- They are overridden by the child class with different implementation
+- You can create object for the class that contains virtual method
 
 2.Interface
 
+- tell you => "what to do"
+- do not tell you => "how to do"
+- ONLY have ABSTRACT METHODS
+- The class that is inherting the interface MUST IMPLEMENT THE ABSTRACT METHODS
 
+
+interface1,interface2----->class
 

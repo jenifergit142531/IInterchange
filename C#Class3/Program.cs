@@ -29,13 +29,25 @@ class Program
     
     public static void Main()
     {
+
+        //Persona p = new Persona();
+
+        HR h1 = new HR();
+        h1.salary();
+        h1.roles();
+        h1.portfolioDetails();
+
+        Sales s1 = new Sales();
+        s1.portfolioDetails();
+        s1.salary();
+        s1.roles();
         //Tollywood t1 = new Tollywood();
         //t1.movieList();
         //t1.showTimings();
 
-        Hollywood h1 = new Hollywood();
-        h1.movieList();
-        h1.showTimings();
+        //Hollywood h1 = new Hollywood();
+        //h1.movieList();
+        //h1.showTimings();
 
         //Movie m1 = new Movie();
         //m1.showTimings();
