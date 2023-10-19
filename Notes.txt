@@ -1,0 +1,70 @@
+
+
+Agenda :
+
+Polymorphism
+
+- Method Overloading
+- Method Overriding (Abstract class and virtual function)
+
+- Constructor
+- Destructor
+- Arrays
+* Single dimensional
+* Multidimensional
+* Jagged arrays
+- Sealed
+- Property
+- Indexers
+
+
+
+Polymorphism => Many forms
+
+1.Static Polymorphism : Compile time / early binding(method overloading , operator overloading)
+2.Dynamic Polymorphism : run time / late binding (abstract , virtual)
+
+Method Overloading : 
+
+- Same method name with different signatures in the same class
+
+* Different Datatype
+* diff return type
+* diff no of arguments passed 
+
+
+Project : 
+
+- do not use overloading 
+- Do not use abstract classes
+- Recommend you to go with interface concept
+
+Property management 
+Add_property()
+Delete_Property()
+Update_Property()
+Select_Property()
+
+- Create 4 interface and 4 classes that implements the interface
+
+Design Pattern - SOLID (Best recommended)
+
+interface interface1
+{
+Add_property()
+}
+
+
+class class1:interface1
+{
+}
+
+interface interface2
+{
+Delete_property()
+}
+
+
+class class2:interface2
+{
+}
