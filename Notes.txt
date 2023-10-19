@@ -9,13 +9,7 @@ Polymorphism
 
 - Constructor
 - Destructor
-- Arrays
-* Single dimensional
-* Multidimensional
-* Jagged arrays
 - Sealed
-- Property
-- Indexers
 
 
 
@@ -68,3 +62,45 @@ Delete_property()
 class class2:interface2
 {
 }
+
+1bc --->1dc--->3dc
+
+
+Constructor :
+
+- Initialize the members of the class
+- Gets invoked automatically whenever you create a instance
+- Constructor name and class name should be same
+- constructor should be public
+- has no return types
+- accept parameters
+- can be overloaded
+
+Types :
+
+- Empty Constructor
+- Parameterized constructor
+- Copy constructor (not recommended)
+
+Constructor overloading :
+
+- more than one constructor in the class
+
+Copy constructor :
+
+- copy the content from already existing contructor to the new constructor
+
+Destructor :
+
+- destroy the instance of the class
+- Destructor will call finalize() - (release the resource - remove db connect, close the file)
+- only one destructor in the class
+- does not have return type
+- ~ => symbol indicates destrutor
+- cannot overload destructor
+- invoked once the program exit 
+
+Sealed : 
+
+- stand alone class
+- cannot be inherited or shared or extending 
