@@ -6,7 +6,6 @@ Agenda :
 * single dimensional
 * multi dimentional
 * Jagged array
-
 - Property
 - Indexers
 - tuples
@@ -34,6 +33,34 @@ Disadvantage :
 - fixed size (declare the size and then initialize)
 - Resource wastage
 - insertion / deletion is difficult
+
+Property :
+
+- member of a class that encapsulates the state of the object
+
+- Control the access to the data fields
+
+get {} - retrieve the value
+set {} - set the value
+
+Why ??
+
+- Validate
+- Control the access
+- Data transformation 
+
+Indexers :
+
+- Virtual array / smart array
+- c# 8.0
+- this keyword
+- [] : access
+- set / get property in indexing
+
+Advantage :
+
+easy access to elements
+
 
 
 

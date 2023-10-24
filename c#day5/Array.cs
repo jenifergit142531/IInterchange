@@ -27,7 +27,7 @@ namespace c_day5
             int[,] data = new int[2, 3]
             {
                 {10,20,30 },
-                {40,50,60 }
+                {40,50,60}
             };
 
             Console.WriteLine(data[0,0]);  //10
@@ -87,11 +87,13 @@ namespace c_day5
         }
 
 
+
+        // array with variable length 
         public static void JaggedArray()
         {
             int[][] ar = new int[3][]
             {
-                new int[2]{10,20 },
+                new int[2]{10,20},
                 new int[5]{30,40,50,60,70},
                 new int[1]{80}
             };
