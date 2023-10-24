@@ -8,29 +8,33 @@ class Program
 {
     public static void Main()
     {
-        var s1 = new Student()
-        {
-            firstName = "aaa",
-            lastName="bbb",
-            Address="chennai",
-            phoneNumber=1234
-        };
-
-        var s2 = new Student()
-        {
-            firstName = "aaa",
-            lastName = "bbbb",
-            Address = "chennai",
-            phoneNumber = 1234
-        };
-
-        var s3 = s2 with { Address = "Salem" };
-
-        Console.WriteLine(s3);
 
 
-        //checking for equality
-        Console.WriteLine(s1 == s2);
+        Unmanaged.show();
+        
+        //var s1 = new Student()
+        //{
+        //    firstName = "aaa",
+        //    lastName="bbb",
+        //    Address="chennai",
+        //    phoneNumber=1234
+        //};
+
+        //var s2 = new Student()
+        //{
+        //    firstName = "aaa",
+        //    lastName = "bbbb",
+        //    Address = "chennai",
+        //    phoneNumber = 1234
+        //};
+
+        //var s3 = s2 with { Address = "Salem" };
+
+        //Console.WriteLine(s3);
+
+
+        ////checking for equality
+        //Console.WriteLine(s1 == s2);
 
 
         //var person1=Tuplee.GetPersonInfo();

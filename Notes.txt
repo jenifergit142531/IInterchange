@@ -77,6 +77,12 @@ Record :
 - get & init
 - "with" keyword to update the property value 
 
+Unmanaged code : Code directly executed by the OS
+
+- does not have CLR support
+
+- unsafe 
+
 
 
 
