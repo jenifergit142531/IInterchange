@@ -42,7 +42,7 @@ namespace c_day5
                         return data[i];
                     }
                 }
-                return null; //key not found
+                return "not found"; //key not found
             }
             set
             {

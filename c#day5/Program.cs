@@ -10,12 +10,17 @@ class Program
 
         MultiIndex mi1 = new MultiIndex();
         
-       // mi1[1] = "One";
+        mi1[1] = "One";
+        mi1[2] = "Two";
+        mi1[3] = "Three";
 
-        mi1["two"] = "2";
+        mi1["One"] = "2";
+        mi1["five"] = "5";
 
-        //Console.WriteLine(mi1[1]);
-        Console.WriteLine(mi1["two"]);
+        Console.WriteLine(mi1[1]);
+        Console.WriteLine(mi1["One"]);
+        //Console.WriteLine(mi1["two"]);
+        //Console.WriteLine(mi1["five"]);
 
 
         //Indexer index1 = new Indexer();
@@ -33,12 +38,12 @@ class Program
         //per1.Age = Convert.ToInt32(Console.ReadLine());
         //Console.WriteLine(per1.Age);
 
-       // Prop p1 = new Prop();
+        // Prop p1 = new Prop();
         //  Prop p2 = new Prop();
         //p1.Name = "Amy";
         //p1.Role = "Training";
 
-       
+
 
         //Console.WriteLine(p1.Name);
         //Console.WriteLine(p1.Role);
