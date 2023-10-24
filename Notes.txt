@@ -1,0 +1,39 @@
+
+
+Agenda :
+
+- Arrays
+* single dimensional
+* multi dimentional
+* Jagged array
+
+- Property
+- Indexers
+- tuples
+- records
+
+Arrays:
+
+- collection of data of same data type
+- reference type
+- Indexes are used to access the array elements
+- index starts with 0
+
+Types :
+* single dimensional
+* multi dimentional
+* Jagged array
+
+Advantages :
+
+- Contiguous memory allocation
+- Easy to access
+
+Disadvantage :
+
+- fixed size (declare the size and then initialize)
+- Resource wastage
+- insertion / deletion is difficult
+
+
+
