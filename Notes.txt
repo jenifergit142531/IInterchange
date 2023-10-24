@@ -61,6 +61,22 @@ Advantage :
 
 easy access to elements
 
+Tuple  :
+
+- Introduced in c# 7.0
+- store data of different data types
+- Light weight
+- Used for temporary data grouping 
+
+Record :
+
+- Introduced in c# 9.0
+- Reference data type
+- Immutable object
+- Properties cannot be changed
+- get & init
+- "with" keyword to update the property value 
+
 
 
 
