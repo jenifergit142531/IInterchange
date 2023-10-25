@@ -88,7 +88,43 @@ Hashset :
 - generic type
 
 
+Key- value :
+
+key : attribute
+value : actual data
+
+1.Hash table
+2.sorted list
 
 
 
+
+* Prioritised
+
+- specifying the order of execution
+- Stack
+
+LIFO - Last in first out
+
+*Eg : Browser back button 
+- stack of books
+- pile of plates
+
+
+push - add elements
+
+pop - remove elements
+
+- Queue
+
+FIFO - first in first out 
+eg :
+
+- waiting line 
+- airport luggaging system
+- ticketing systems
+
+enqueue - add elements
+
+dequeue - remove elements
 

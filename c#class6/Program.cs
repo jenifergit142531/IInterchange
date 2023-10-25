@@ -6,9 +6,16 @@ class Program
 {
     public static void Main()
     {
+        Prioritised.LuggageSystem();
 
-        HashingSet.hashingSet();
-       // HashSet<string> hs1 = HashingSet.hashingSet();
+       // Prioritised.browsingHistory();
+
+        //KeyValue.sortedList();
+
+        // KeyValue.hashingTable();
+
+        // HashingSet.hashingSet();
+        // HashSet<string> hs1 = HashingSet.hashingSet();
 
         //foreach (var i in hs1)
         //{
