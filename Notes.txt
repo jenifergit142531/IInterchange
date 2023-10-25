@@ -34,3 +34,61 @@ using System.ComponentModel.DataAnnotations;
 RegEx : Regular expression
 
 - Pattern that validates your code
+
+
+Collections :
+
+built in data structures
+- Deal with large volume of data 
+- IEnumerable - root interface
+
+Types : 
+
+Generic :
+
+* System.Collections.Generics
+* Strongly typed
+* Type safe
+Eg:
+List<T>
+Dictionary<Tkey,Tvalue)
+sortedlist
+hashset
+stack<T>,queue<T>
+
+Non-Generic :
+
+- System.collectuions
+- Not strongly typed
+- Not type safe
+eg : arraylist,hashtable,stack,queue
+
+* Indexed Based :
+
+Array List :
+
+- Dynamic in nature
+- size can he changed 
+- Different data types
+- insertion / deletion is faster
+- Properties : capacity , count
+- methods : add,remove,sort,reverse
+
+List :
+
+- Generic collection
+- strongly typed
+
+
+Hashset :
+
+- avoids duplicate value
+- Not indexed like arraylist / list
+- holds unique values
+- generic type
+
+
+
+
+
+

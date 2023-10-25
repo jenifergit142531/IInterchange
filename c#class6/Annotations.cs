@@ -20,7 +20,8 @@ namespace c_class6
         [Range(0,15,ErrorMessage ="Property age should be between 0 - 15 years old")]
         public int PropAge { get; set; }
 
-        [Required(ErrorMessage ="Owner Name is mandatory")]
+      //  [Required(ErrorMessage ="Owner Name is mandatory")]
+        [IsEmpty(ErrorMessage = "Should not be null or empty")]
         public string OwnerName { get; set; }
 
         [RegularExpression(@"^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$",ErrorMessage ="enter a valid phone number")]
@@ -30,6 +31,7 @@ namespace c_class6
         public string Email { get; set; }
 
         [Display(Name="Property Price",Description="Enter the market value of your property")]
+       
         public int PropPrice { get; set; }
 
         [DataType(DataType.Date)]
