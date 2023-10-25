@@ -1,0 +1,36 @@
+
+
+
+Agenda :
+
+- Data annotation
+
+- Collections
+
+* Generic and Non-Generic Collection
+
+* Index based
+- Array List,List
+
+* Key Value
+- Hash table and sorted List
+
+* Prioritised
+- Stack and Queue
+
+* Specialised
+- Dictionary
+
+
+- Data Annotation :
+
+=> Data validation 
+=> Database mapping
+=> describes how the data should be treated and validated
+
+
+using System.ComponentModel.DataAnnotations;
+
+RegEx : Regular expression
+
+- Pattern that validates your code

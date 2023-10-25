@@ -1,0 +1,14 @@
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\bin\Debug\net6.0\c#class6.exe
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\bin\Debug\net6.0\c#class6.deps.json
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\bin\Debug\net6.0\c#class6.runtimeconfig.json
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\bin\Debug\net6.0\c#class6.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\bin\Debug\net6.0\c#class6.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.AssemblyInfoInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.AssemblyInfo.cs
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.csproj.CoreCompileInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\refint\c#class6.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\c#class6.genruntimeconfig.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class6\c#class6\obj\Debug\net6.0\ref\c#class6.dll
