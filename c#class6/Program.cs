@@ -6,7 +6,9 @@ class Program
 {
     public static void Main()
     {
-        Prioritised.LuggageSystem();
+
+        Dictionary.countries();
+        //Prioritised.LuggageSystem();
 
        // Prioritised.browsingHistory();
 

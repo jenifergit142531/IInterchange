@@ -128,3 +128,10 @@ enqueue - add elements
 
 dequeue - remove elements
 
+
+Dictionary :
+
+key - value
+generic
+key cannot be null
+must be unique
