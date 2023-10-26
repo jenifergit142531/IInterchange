@@ -11,13 +11,36 @@ namespace c_class7
 
     public delegate void delSingle(int i,int j);
 
+
+    //public delegate int delAdd(int i, int j);
+
+    //public delegate string delConcat(string i, string j);
+
+    //public delegate double delArea(double i, double j);
+
+
+
+    //Declare a generic delegate with <T> parameter
+
+
+    public delegate T genericDeletegate<T>(T i, T j);
+
     internal class Delegating
     {
        
-
-        public static void add(int a,int b)
+        public static string concat(string a ,string b)
         {
-            Console.WriteLine("Sum :{0}", a + b);
+            return a + b;
+        }
+
+        public static double area(double len,double bre)
+        {
+            return len * bre;
+        }
+        public static int add(int a,int b)
+        {
+            return a + b;
+            //Console.WriteLine("Sum :{0}", a + b);
         }
         public static void sub(int a, int b)
         {

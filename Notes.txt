@@ -51,3 +51,11 @@ Types :
 += operator to multicast multiple methods to a single delegate
 
 
+Generic Delegate :
+
+T - datatype
+
+delegate must work with different method signature
+
+
+

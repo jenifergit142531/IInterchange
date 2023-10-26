@@ -16,17 +16,37 @@ class Program
     }
     public static void Main()
     {
-        loginDelegate userlogin = Authenticate.login;
-        Program.GetUserDetails();
-        bool result=userlogin(uname,pwd);
-        if(result)
-        {
-            Console.WriteLine("Login successful !!!");
-        }
-        else
-        {
-            Console.WriteLine("Login failes..try again");
-        }
+
+
+
+        genericDeletegate<string> gd1 = Delegating.concat;
+        Console.WriteLine(gd1("hello", "world"));
+       
+
+        genericDeletegate<int> gd2 = Delegating.add;
+        Console.WriteLine(gd2(10, 20));
+
+        genericDeletegate<double> gd3 = Delegating.area;
+        Console.WriteLine(gd3(45, 12));
+
+
+
+
+
+
+       //loginDelegate userlogin = new loginDelegate(Authenticate.login);
+
+      // loginDelegate userlogin2 = Authenticate.login;
+        //Program.GetUserDetails();
+        //bool result=userlogin(uname,pwd);
+        //if(result)
+        //{
+        //    Console.WriteLine("Login successful !!!");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Login failes..try again");
+        //}
 
 
 
@@ -36,17 +56,21 @@ class Program
         //set the target method
 
 
-        //delSingle ds1 = new delSingle(Delegating.add);
+       // delSingle ds1 = new delSingle(Delegating.add);
+
+        //ds1 += new delSingle(Delegating.sub);
 
 
         //ds1 += new delSingle(Delegating.multiply);
+
+        //ds1 += new delSingle(Delegating.Divide);
 
 
         //delSingle ds2 = new delSingle(Delegating.sub);
 
         //invocation
 
-        //ds1(10, 20);
+        //ds1(100, 20);
 
         //ds2(30, 20);
 
