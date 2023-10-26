@@ -57,5 +57,36 @@ T - datatype
 
 delegate must work with different method signature
 
+Anonymous delegate :
+
+- delegate has no method
+- no formal name / definition for your method
+- method is defined inline
+- Short,simple  delegate
+
+Built in delegates :
+
+- func :
+
+* MUST return a value
+* 0 - 16 input parameters
+* does not allow ref / out parameters
+* anonymous functions & lambda expressions
+
+lambda expression :
+
+* => 
+
+input => expression
+
+- action
+
+* does not return a value
+* return type is void
+* accept 0 - 16 input parameters
+* anonymous functions & lambda expressions
+
+- predicate
+
 
 

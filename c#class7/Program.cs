@@ -2,6 +2,9 @@
 
 
 delegate bool loginDelegate(string uname, string pwd);
+
+
+delegate void MathOperation(int a);
 class Program
 {
     public static string uname;
@@ -17,17 +20,59 @@ class Program
     public static void Main()
     {
 
+        ActionDelegate.MyAction();
+        //function delegate
 
+        /*Func<int, int, int> f1 = FuncDelegate.sum;
+        Console.WriteLine(f1(10, 10));*/
 
-        genericDeletegate<string> gd1 = Delegating.concat;
-        Console.WriteLine(gd1("hello", "world"));
+        /* func delegate with anonymous method 
+
+        Func<int> generateRandom = delegate ()
+        {
+            Random rnd = new Random();
+            return rnd.Next(1, 100);
+        };
+
+        Console.WriteLine(generateRandom());*/
+
+        /* func delegate with lambda expression
+
+        Func<int> randomnum = () => new Random().Next(60, 100);
+        Console.WriteLine(randomnum());*/
+        
        
 
-        genericDeletegate<int> gd2 = Delegating.add;
-        Console.WriteLine(gd2(10, 20));
 
-        genericDeletegate<double> gd3 = Delegating.area;
-        Console.WriteLine(gd3(45, 12));
+
+        //anonymous delegate
+
+       // Anonymous.CalcEven();
+
+       /* MathOperation loop = delegate (int x)
+        {
+           for(int i=0;i<=x;i++)
+            {
+                Console.WriteLine(i);
+            }
+
+           
+        };
+
+        loop(10);*/
+
+        
+
+
+        //genericDeletegate<string> gd1 = Delegating.concat;
+        //Console.WriteLine(gd1("hello", "world"));
+       
+
+        //genericDeletegate<int> gd2 = Delegating.add;
+        //Console.WriteLine(gd2(10, 20));
+
+        //genericDeletegate<double> gd3 = Delegating.area;
+        //Console.WriteLine(gd3(45, 12));
 
 
 
