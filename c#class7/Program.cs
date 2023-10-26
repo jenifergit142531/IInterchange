@@ -20,7 +20,9 @@ class Program
     public static void Main()
     {
 
-        ActionDelegate.MyAction();
+        //ActionDelegate.MyAction();
+
+        PredicateDelegate.myPredicate();
         //function delegate
 
         /*Func<int, int, int> f1 = FuncDelegate.sum;
@@ -40,33 +42,33 @@ class Program
 
         Func<int> randomnum = () => new Random().Next(60, 100);
         Console.WriteLine(randomnum());*/
-        
-       
+
+
 
 
 
         //anonymous delegate
 
-       // Anonymous.CalcEven();
+        // Anonymous.CalcEven();
 
-       /* MathOperation loop = delegate (int x)
-        {
-           for(int i=0;i<=x;i++)
-            {
-                Console.WriteLine(i);
-            }
+        /* MathOperation loop = delegate (int x)
+         {
+            for(int i=0;i<=x;i++)
+             {
+                 Console.WriteLine(i);
+             }
 
-           
-        };
 
-        loop(10);*/
+         };
 
-        
+         loop(10);*/
+
+
 
 
         //genericDeletegate<string> gd1 = Delegating.concat;
         //Console.WriteLine(gd1("hello", "world"));
-       
+
 
         //genericDeletegate<int> gd2 = Delegating.add;
         //Console.WriteLine(gd2(10, 20));
@@ -79,9 +81,9 @@ class Program
 
 
 
-       //loginDelegate userlogin = new loginDelegate(Authenticate.login);
+        //loginDelegate userlogin = new loginDelegate(Authenticate.login);
 
-      // loginDelegate userlogin2 = Authenticate.login;
+        // loginDelegate userlogin2 = Authenticate.login;
         //Program.GetUserDetails();
         //bool result=userlogin(uname,pwd);
         //if(result)
@@ -101,7 +103,7 @@ class Program
         //set the target method
 
 
-       // delSingle ds1 = new delSingle(Delegating.add);
+        // delSingle ds1 = new delSingle(Delegating.add);
 
         //ds1 += new delSingle(Delegating.sub);
 

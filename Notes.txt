@@ -88,5 +88,10 @@ input => expression
 
 - predicate
 
+* return boolean value
+* accept 1 input
+* used with anonymous functions & lambda expressions
+
+
 
 
