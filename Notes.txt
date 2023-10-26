@@ -1,0 +1,53 @@
+
+
+Agenda :
+
+- Delegates
+* Single cast
+* Multicast
+- Anonymous delegate
+- Generic delegate
+- Built in Delegates
+* Func
+* Action
+* Predicate
+- Lambda Expression
+- Events
+- Event Handling
+
+
+Delegate :
+
+- Reference type
+- Type safe pointer
+- hold the references to the method
+- Many delegates in your class
+- Delegates work well with lambda expression and anonymous method
+
+Need ?
+- Call back to the method at run time.
+- Invoke the event
+
+Three step process 
+
+Step 1 : Declare the delegate 
+
+<accessmodifier> delegate <returntype> <delegatename>(parameter)
+
+Step 2 : Set the target method 
+
+delegatename dn=new delegatename(method)
+
+Step 3 : Invocation (resolved at runtime)
+
+dn()
+
+Types :
+
+- Single cast :  1delegate--> 1 method
+
+- Multicast delegate : 1d--> many methods 
+
++= operator to multicast multiple methods to a single delegate
+
+
