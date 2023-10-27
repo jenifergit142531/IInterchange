@@ -1,0 +1,19 @@
+
+
+
+Agenda :
+
+- Lambda Expression
+- Events
+- Event handling 
+
+Event :
+
+- any user action like button click,mouse over - create an event
+
+event handling - handling the event
+
+- delegates and events work together
+
+
+
