@@ -6,6 +6,7 @@ Agenda :
 - Lambda Expression
 - Events
 - Event handling 
+- LINQ
 
 Event :
 
@@ -14,6 +15,21 @@ Event :
 event handling - handling the event
 
 - delegates and events work together
+
+
+Linq - Language integrated query 
+
+- query syntax in c#
+
+why ??
+
+- to interact with the data source
+- datasource - xml,sql,json,any data
+- Supports build in query methods
+
+from <database/file/list/collection/object>
+where <condition>
+select <resultset>
 
 
 

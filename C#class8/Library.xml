@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<library>
+	<book>
+		<bookid>101</bookid>
+		<bookname>she erased her</bookname>
+		<author>sasi</author>
+	</book>
+	<book>
+		<bookid>201</bookid>
+		<bookname>Ikigai</bookname>
+		<author>paul</author>
+	</book>
+	<book>
+		<bookid>301</bookid>
+		<bookname>Inferno</bookname>
+		<author>Dan</author>
+	</book>
+</library>
