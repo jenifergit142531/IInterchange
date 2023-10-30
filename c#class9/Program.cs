@@ -4,9 +4,9 @@ class Program
 {
     public static void Main()
     {
-
+        MyDirectory.CreateFolder();
         //TextFile.textWriter();
-        TextFile.textReader();
+       // TextFile.textReader();
        // StreamFile.streamWrite();
         //StreamFile.streamRead();
        // BinaryFile.binaryWrite();

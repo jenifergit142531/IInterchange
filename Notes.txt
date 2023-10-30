@@ -31,5 +31,8 @@ Stream :
 Input stream :read data
 output stream : write data
 
+Directory:
 
+dir.create();
+dir.delete();
 

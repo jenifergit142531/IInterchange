@@ -14,7 +14,7 @@ namespace c_class9
 
             StringBuilder sb = new StringBuilder();
 
-            StringWriter sw = new StringWriter(sb);
+            StringWriter sw = new StringWriter();
             sw.WriteLine(text);
             sw.Close();
 
