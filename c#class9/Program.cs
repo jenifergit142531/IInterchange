@@ -4,7 +4,10 @@ class Program
 {
     public static void Main()
     {
-        MyDirectory.CreateFolder();
+
+        Reflection.classReflection();
+        //Reflection.typeReflect();
+        //MyDirectory.CreateFolder();
         //TextFile.textWriter();
        // TextFile.textReader();
        // StreamFile.streamWrite();

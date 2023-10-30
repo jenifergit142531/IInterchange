@@ -16,7 +16,7 @@ Linq :
 * string reader / string writer
 * Directory
 
-- Serialization
+- Reflection
 
 
 Files :
@@ -35,4 +35,12 @@ Directory:
 
 dir.create();
 dir.delete();
+
+Reflection :
+
+- description about metadata
+- metadata => data about the data 
+- describe your datatype,method,class,parameter,constructor
+
+System.Reflection
 
