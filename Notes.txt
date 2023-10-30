@@ -13,10 +13,11 @@ Linq :
 * Binary reader / binary writer
 * Stream reader / stream writer
 * text reader / text writer
+* string reader / string writer
+* Directory
 
 - Serialization
-- Reflection
-- Attributes
+
 
 Files :
 

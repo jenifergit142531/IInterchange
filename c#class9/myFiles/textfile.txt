@@ -1,0 +1,2 @@
+Text writer is an abstract class
+It calls stream writer to write its content
