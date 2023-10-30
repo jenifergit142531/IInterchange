@@ -48,6 +48,10 @@ namespace c_class9
         public static void classReflection()
         {
             Assembly exec = Assembly.GetExecutingAssembly();
+            Console.WriteLine("Assembly Name :" +exec.GetName().Name);
+            Console.WriteLine("Files : " +exec.GetFiles().Length);
+            Console.WriteLine("GUID :" + exec.GetName().Version);
+
             Type[] typeInfo = exec.GetTypes();
             foreach(var mytypes in typeInfo)
             {
