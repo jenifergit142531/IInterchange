@@ -1,0 +1,14 @@
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\bin\Debug\net6.0\c#class9.exe
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\bin\Debug\net6.0\c#class9.deps.json
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\bin\Debug\net6.0\c#class9.runtimeconfig.json
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\bin\Debug\net6.0\c#class9.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\bin\Debug\net6.0\c#class9.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.AssemblyInfoInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.AssemblyInfo.cs
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.csproj.CoreCompileInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\refint\c#class9.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\c#class9.genruntimeconfig.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class9\c#class9\obj\Debug\net6.0\ref\c#class9.dll

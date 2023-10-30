@@ -1,0 +1,34 @@
+
+
+
+Agenda :
+
+Linq :
+
+- Partition 
+- Set Operation
+
+- Files
+* Byte reader / Byte writer
+* Binary reader / binary writer
+* Stream reader / stream writer
+* text reader / text writer
+
+- Serialization
+- Reflection
+- Attributes
+
+Files :
+
+- collection of data / large volume of data in a specific location
+- Read : read the data from file
+- Write : write the data to file
+
+Stream :
+
+- flow of data 
+Input stream :read data
+output stream : write data
+
+
+
