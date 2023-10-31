@@ -21,7 +21,7 @@ class IsemptyAttribute : ValidateAttibute
 [Isempty]
 public string phoneno {get;set}
 
-- Threads & Task
+- Threads 
 
 Serialization :
 
@@ -51,6 +51,52 @@ Serialization :
 
  - Some info added to your code
  - some addln functionalities included on your code
+
+
+ Thread :
+
+ - light weight process
+ - code of execution
+ - one thread execute one job at a time
+
+ Synchronous : 
+
+ - thread1 -- work1,work2,work3...
+ - time consuming and not efficient
+
+ Asynchronous :
+
+ - all the threads run in parallel
+ thread1 --> work1
+ thread2 ---> work2
+ thread3---> work3
+
+ Multithreading : many threads executes multiple jobs at the same time
+
+ Lifecycle of Thread :(stages)
+
+ 1.Unstarted: thread is created , but execution  not started
+
+ thread th=new thread();
+
+ 2.Started : start() , thread execution begins
+
+ 3.Running :threads in run
+
+ 4.Not Runnable : wait() - operation is blocked,sleep() - idle 
+
+ 5.Dead - Thread is terminated 
+
+ Types :
+
+ - Foreground Thread
+
+ * even if the main thread stops , the child thread will keep executing
+
+ - Background Thread
+
+ * if the main thread stops , the child thread also stops the execution
+
 
 
 
