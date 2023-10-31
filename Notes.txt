@@ -1,0 +1,61 @@
+
+
+Agenda :
+
+- Serialization
+
+* Binary serialization
+* XML Serialization
+* JSON Serialization
+
+- Attributes
+
+* Built in attribute
+* Custom attribute
+
+[AttributeUsage(Attribute.Property)]
+class IsemptyAttribute : ValidateAttibute
+{
+}
+
+[Isempty]
+public string phoneno {get;set}
+
+- Threads & Task
+
+Serialization :
+
+- converting your object into bytes which can then be stored in a
+ file / database / memory
+
+ * Binary serialization :
+
+ converts the object to binary format
+ - This format is not human readable
+ - Its often used for local storage for transmitting the data in binary format
+ - BinaryFormatter - class that is used for binary serialization
+
+
+ * XML Serialization:
+
+ - converts the object to XML Format
+ - This format is human readable
+
+ * JSON Serialization :
+
+ - converts objects to JSON Format
+ - {"","","".....""}
+ - Widely used on REST API,Web services.
+
+ Attributes :
+
+ - Some info added to your code
+ - some addln functionalities included on your code
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.AssemblyInfoInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.AssemblyInfo.cs
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.csproj.CoreCompileInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\bin\Debug\net6.0\C#Class10.exe
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\bin\Debug\net6.0\C#Class10.deps.json
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\bin\Debug\net6.0\C#Class10.runtimeconfig.json
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\bin\Debug\net6.0\C#Class10.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\bin\Debug\net6.0\C#Class10.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\refint\C#Class10.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.genruntimeconfig.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\ref\C#Class10.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.csproj.AssemblyReference.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\obj\Debug\net6.0\C#Class10.csproj.CopyComplete

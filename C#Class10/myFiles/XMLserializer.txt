@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Movie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <filepath>C:\Users\JeniferY\Desktop\iinterchange\Console\C#Class10\C#Class10\myFiles\XMLserializer.txt</filepath>
+  <movieName>Leo</movieName>
+  <ticketPrice>250</ticketPrice>
+</Movie>
