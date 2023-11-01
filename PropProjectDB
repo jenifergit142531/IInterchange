@@ -1,0 +1,58 @@
+
+
+create database property
+
+use property
+
+create table propshop(propid uniqueidentifier default newid(),propname varchar(30),ownername varchar(15),propage int,propprice money,postedDate datetime)
+
+
+select * from propshop
+
+drop procedure Getproperty
+
+-- select procedure
+
+create procedure getproperty
+as
+begin
+select * from propshop
+end
+
+-- insert procedure
+
+create procedure insertproperty
+@propname varchar(30),
+@ownername varchar(15),
+@propage int,
+@propprice money,
+@postedDate datetime
+as
+begin
+insert into propshop(propname,ownername,propage,propprice,posteddate)
+values
+(@propname,@ownername,@propage,@propprice,@postedDate)
+end
+
+-- delete procedure
+create procedure deleteproperty
+@id uniqueidentifier
+as
+begin
+delete from propshop where propid=@id
+end
+
+--update procedure
+create procedure updateProperty
+@id uniqueidentifier,
+@propname varchar(30),
+@ownername varchar(15),
+@propage int,
+@propprice money,
+@postedDate datetime
+as
+begin
+update propshop
+set propname=@propname,ownername=@ownername,propage=@propage,propprice=@propprice,postedDate=@postedDate
+where propid=@id
+end
