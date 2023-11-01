@@ -16,11 +16,21 @@ namespace c_class11
         
         public static void TaskParallelism()
         {
+            ParallelOptions parallelOptions = new ParallelOptions
+            {
+                MaxDegreeOfParallelism = 2
+            };
             Stopwatch watch = new Stopwatch();
             watch.Start();
-            Parallel.Invoke(Method3, Method2, Method1);
+            Parallel.Invoke(parallelOptions,Method2, Method3, Method1);
             watch.Stop();
             Console.WriteLine($"Time to execute : {watch.ElapsedMilliseconds} milliseconds");
+            
+            Console.WriteLine("Regular execution");
+            Method3();
+            Method2();
+            Method1();
+
         }
         public static void Method1()
         {
