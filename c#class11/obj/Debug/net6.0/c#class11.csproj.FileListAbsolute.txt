@@ -12,3 +12,11 @@ C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\obj\Debug\net
 C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\obj\Debug\net6.0\c#class11.pdb
 C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\obj\Debug\net6.0\c#class11.genruntimeconfig.cache
 C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\obj\Debug\net6.0\ref\c#class11.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\obj\Debug\net6.0\c#class11.csproj.AssemblyReference.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\c#class11\c#class11\obj\Debug\net6.0\c#class11.csproj.CopyComplete

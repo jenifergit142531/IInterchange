@@ -6,7 +6,7 @@ Agenda :
 - Async / Await 
 - TPL
 - ADO.NET
-- EF 
+
 
 Task
 
@@ -45,3 +45,27 @@ Parallel.ForEach
 Task Parallelism :
 
 Parallel.Invoke ();
+
+ADO.NET :
+
+ActiveX data object
+
+- interact with your database
+- perform crud operation
+
+Steps :
+
+1.Create a sql connection
+
+sqlconnection con=new sqlconnection("connection string here");
+
+2. Create a sql command 
+
+insert ,update,read ,delete
+
+sqlcommand cmd=new sqlcommand("insert into table....",con);
+
+3.Execute the query
+
+cmd.ExecuteReader()   -- select 
+cmd.ExecuteNonQuery()  --- insert / update / delete 

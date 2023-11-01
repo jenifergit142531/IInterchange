@@ -6,7 +6,8 @@ class Program
 {
     public static void Main()
     {
-        TaskParallel.TaskParallelism();
+        PropertyADO.GetPropertyDetails();
+       // TaskParallel.TaskParallelism();
 
         //DataParallel.ShowLoop();
         //SimpleTask.IndianFood();
