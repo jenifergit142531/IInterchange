@@ -40,3 +40,8 @@ Data Parallelism :
 Parallel.For
 
 Parallel.ForEach
+
+
+Task Parallelism :
+
+Parallel.Invoke ();
