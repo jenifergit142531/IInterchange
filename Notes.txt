@@ -1,0 +1,42 @@
+
+
+Agenda :
+
+- Task
+- Async / Await 
+- TPL
+- ADO.NET
+- EF 
+
+Task
+
+- Supports asynchronous
+- Parallelism (data / task )
+- Concurrency :
+multiple task execute at same time
+
+Syntax :
+
+1.Task <tskobj> = new Task();
+
+2. Task <tskobj> = Task.Run()=>
+{
+//some code goes here
+}
+
+3.Task <tskobj> = Task.Factory.StartNew();
+
+
+ASync :Asynchronously executed
+Await : Wait for specified period of time
+
+TPL : Task Parallel library
+
+- Set of predefined methods and construct for implementing data and task parallelism
+
+
+Data Parallelism :
+
+Parallel.For
+
+Parallel.ForEach
