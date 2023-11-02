@@ -126,6 +126,8 @@ namespace c_class11
         {
             Console.WriteLine("Enter the property Id :");
             id = Console.ReadLine();
+            Console.WriteLine("*************************************************");
+            Console.WriteLine("Please find the property details below :");
             using (var con = new SqlConnection(connectionString))
             {
                 using (var cmd = new SqlCommand("getpropertybyid", con))
