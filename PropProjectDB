@@ -56,3 +56,12 @@ update propshop
 set propname=@propname,ownername=@ownername,propage=@propage,propprice=@propprice,postedDate=@postedDate
 where propid=@id
 end
+
+
+-- getpropertybyid
+create procedure getpropertybyid
+@propid uniqueidentifier
+as
+begin
+select * from propshop where propid=@propid
+end
