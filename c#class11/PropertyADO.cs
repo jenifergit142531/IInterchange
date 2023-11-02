@@ -16,6 +16,7 @@ namespace c_class11
         public static int page;
         public static int price;
         public static DateTime pdate;
+        public string id;
 
 
 
@@ -81,7 +82,8 @@ namespace c_class11
                     con.Open();
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("Property details successfully added");
-                    //GetPropertyDetails();
+                    Console.WriteLine("Please find the property details below :");
+                    GetPropertyById();
 
 
                 }
@@ -95,8 +97,58 @@ namespace c_class11
         public void DeleteProperty()
         {
 
+            GetPropertyById();
+            
+            Console.WriteLine("Are you sure that you want to delete this property ? (Y /N)");
+            char choice = Convert.ToChar(Console.ReadLine());
+            if (choice == 'Y')
+            {
+                using (var con = new SqlConnection(connectionString))
+                {
+                    using (var cmd = new SqlCommand("deleteproperty", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", id);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                Console.WriteLine("Property successfully deleted");
+            }
+            else
+            {
+                Console.WriteLine("Property not deleted ");
+                GetPropertyDetails();
+            }
         }
 
+        public void GetPropertyById()
+        {
+            Console.WriteLine("Enter the property Id :");
+            id = Console.ReadLine();
+            using (var con = new SqlConnection(connectionString))
+            {
+                using (var cmd = new SqlCommand("getpropertybyid", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@propid", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine($"Property Id :{reader["propid"]}," + "\n" +
+                                $"Property Name :{reader["propname"]}," + "\n" +
+                                $"Owner Name :{reader["ownername"]}," + "\n" +
+                                $"Property Age :{reader["propage"]}," + "\n" +
+                                $"Property Price :{reader["propprice"]}," + "\n" +
+                                $"Property Posted Date :{reader["postedDate"]}");
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

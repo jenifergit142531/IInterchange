@@ -12,6 +12,8 @@ namespace c_class11
 
         void GetPropertyDetails();
 
+        void GetPropertyById();
+
         void GetUserInput();
 
         void InsertProperty();
