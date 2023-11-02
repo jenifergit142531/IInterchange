@@ -90,10 +90,30 @@ namespace c_class11
             }
         }
 
-        public void UpdateProperty()
-        {
+         public void UpdateProperty()
+ {
+     GetPropertyById();
+     Console.WriteLine("Please enter the details to be updated");
+     GetUserInput();
+     using (var con = new SqlConnection(connectionString))
+     {
+         using (var cmd = new SqlCommand("updateProperty", con))
+         {
+             cmd.CommandType = CommandType.StoredProcedure;
+             cmd.Parameters.AddWithValue("@id", id);
+             cmd.Parameters.AddWithValue("@propname", pname);
+             cmd.Parameters.AddWithValue("@ownername", oname);
+             cmd.Parameters.AddWithValue("@propage", page);
+             cmd.Parameters.AddWithValue("@propprice", price);
+             cmd.Parameters.AddWithValue("@postedDate", pdate);
+             con.Open();
+             cmd.ExecuteNonQuery();
+             Console.WriteLine("Property details successfully updated");
+            
 
-        }
+         }
+     }
+ }
         public void DeleteProperty()
         {
 
