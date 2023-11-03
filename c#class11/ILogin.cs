@@ -9,6 +9,6 @@ namespace c_class11
     internal interface ILogin
     {
         void logincheck();
-        void check();
+        void LoginUserInput();
     }
 }

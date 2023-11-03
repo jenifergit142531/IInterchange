@@ -66,6 +66,31 @@ namespace c_class11
             pdate = Convert.ToDateTime(Console.ReadLine());
         }
 
+        public void GetPropertyByName()
+        {
+            using (var con = new SqlConnection(connectionString))
+            {
+                using (var cmd = new SqlCommand("getpropertybyname", con))
+                {
+                    con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@propname", pname);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine($"Property Id :{reader["propid"]}," + "\n" +
+                                $"Property Name :{reader["propname"]}," + "\n" +
+                                $"Owner Name :{reader["ownername"]}," + "\n" +
+                                $"Property Age :{reader["propage"]}," + "\n" +
+                                $"Property Price :{reader["propprice"]}," + "\n" +
+                                $"Property Posted Date :{reader["postedDate"]}");
+                        }
+                    }
+                }
+            }
+        }
         public void InsertProperty()
         {
             GetUserInput();
@@ -83,7 +108,9 @@ namespace c_class11
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("Property details successfully added");
                     Console.WriteLine("Please find the property details below :");
-                    GetPropertyById();
+
+                    //GetPropertyById();
+                    GetPropertyByName();
 
 
                 }
@@ -92,7 +119,27 @@ namespace c_class11
 
         public void UpdateProperty()
         {
+            GetPropertyById();
+            Console.WriteLine("Please enter the details to be updated");
+            GetUserInput();
+            using (var con = new SqlConnection(connectionString))
+            {
+                using (var cmd = new SqlCommand("updateProperty", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@propname", pname);
+                    cmd.Parameters.AddWithValue("@ownername", oname);
+                    cmd.Parameters.AddWithValue("@propage", page);
+                    cmd.Parameters.AddWithValue("@propprice", price);
+                    cmd.Parameters.AddWithValue("@postedDate", pdate);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("Property details successfully updated");
+                   
 
+                }
+            }
         }
         public void DeleteProperty()
         {
