@@ -1,0 +1,37 @@
+
+
+Agenda :
+
+- Entity Framework Core
+- Window Form
+- Web technology
+- Web Form
+- ASP.NET Core MVC
+* Model 
+* View
+* Controller
+- Folder Structure of MVC
+- Create a simple mvc application
+
+Entity Framework Core :
+
+- ORM
+- Object relational mapper
+- Light weight ,open source ,and cross platform version that is used for data access
+- Scaffolding the code
+
+Packages :
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+Approaches :
+
+- Code first approach (code (class)---> datatable)
+- Database first approach(db(table)---> code)
+- Model first approach (designer ---> generate db,code)
+
+EF Core commands :
+
+
