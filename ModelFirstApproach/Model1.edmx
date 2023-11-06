@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Shops" EntityType="Model1.Store.Shops" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Warehouses" EntityType="Model1.Store.Warehouses" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ShopWarehouse" Association="Model1.Store.ShopWarehouse">
+      <End Role="Shop" EntitySet="Shops" />
+      <End Role="Warehouse" EntitySet="Warehouses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Year" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Warehouses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShopId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ShopWarehouse">
+    <End Role="Shop" Type="Model1.Store.Shops" Multiplicity="1" />
+    <End Role="Warehouse" Type="Model1.Store.Warehouses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Shops" EntityType="Model1.Shop" />
+          <EntitySet Name="Warehouses" EntityType="Model1.Warehouse" />
+          <AssociationSet Name="ShopWarehouse" Association="Model1.ShopWarehouse">
+            <End Role="Shop" EntitySet="Shops" />
+            <End Role="Warehouse" EntitySet="Warehouses" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Shop">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" Nullable="false" />
+          <Property Name="Year" Type="String" Nullable="false" />
+          <NavigationProperty Name="Warehouses" Relationship="Model1.ShopWarehouse" FromRole="Shop" ToRole="Warehouse" />
+        </EntityType>
+        <EntityType Name="Warehouse">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quantity" Type="String" Nullable="false" />
+          <Property Name="Price" Type="String" Nullable="false" />
+          <NavigationProperty Name="Shop" Relationship="Model1.ShopWarehouse" FromRole="Warehouse" ToRole="Shop" />
+          <Property Name="ShopId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="ShopWarehouse">
+          <End Type="Model1.Shop" Role="Shop" Multiplicity="1" />
+          <End Type="Model1.Warehouse" Role="Warehouse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shop">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Warehouse">
+              <PropertyRef Name="ShopId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Shops">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Shop)">
+        <MappingFragment StoreEntitySet="Shops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Warehouse)">
+        <MappingFragment StoreEntitySet="Warehouses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

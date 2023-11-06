@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="interModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="int" Nullable="false" />
+    <Property Name="cuscode" Type="varchar" MaxLength="10" />
+    <Property Name="cusname" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'inter.dbo.databaselog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="databaselog">
+    <Key>
+      <PropertyRef Name="logid" />
+      <PropertyRef Name="changedby" />
+    </Key>
+    <Property Name="logid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eventval" Type="xml" />
+    <Property Name="eventdate" Type="datetime" />
+    <Property Name="changedby" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="deptid" />
+    </Key>
+    <Property Name="deptid" Type="int" Nullable="false" />
+    <Property Name="dname" Type="varchar" MaxLength="20" />
+    <Property Name="eid" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'inter.dbo.emp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="emp">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="ename" Type="varchar" MaxLength="20" />
+    <Property Name="eid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="salary" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'inter.dbo.emp2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="emp2">
+    <Key>
+      <PropertyRef Name="emp" />
+    </Key>
+    <Property Name="emp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ename" Type="varchar" MaxLength="21" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'inter.dbo.emplog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="emplog">
+    <Key>
+      <PropertyRef Name="logid" />
+      <PropertyRef Name="empid" />
+      <PropertyRef Name="updatedate" />
+    </Key>
+    <Property Name="logid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empid" Type="int" Nullable="false" />
+    <Property Name="operation" Type="varchar" MaxLength="20" />
+    <Property Name="updatedate" Type="datetime" Nullable="false" />
+    <Property Name="empname" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="int" Nullable="false" />
+    <Property Name="ename" Type="varchar" MaxLength="20" />
+    <Property Name="role" Type="varchar" MaxLength="20" />
+    <Property Name="salary" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.employee2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="employee2">
+          <Property Name="eid" Type="int" />
+          <Property Name="ename" Type="varchar" MaxLength="20" />
+          <Property Name="role" Type="varchar" MaxLength="20" />
+          <Property Name="salary" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.game' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="game">
+          <Property Name="gid" Type="int" />
+          <Property Name="gname" Type="varchar" MaxLength="20" />
+          <Property Name="type" Type="varchar" MaxLength="20" />
+          <Property Name="loginmail" Type="varchar" MaxLength="25" />
+          <Property Name="phoneno" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'inter.dbo.movielog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="movielog">
+    <Key>
+      <PropertyRef Name="logid" />
+    </Key>
+    <Property Name="logid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="moviename" Type="varchar" MaxLength="20" />
+    <Property Name="ticketprice" Type="int" />
+    <Property Name="operation" Type="varchar" MaxLength="10" />
+    <Property Name="changeddate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.nametable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="nametable">
+          <Property Name="name" Type="varchar" MaxLength="25" />
+          <Property Name="lenofname" Type="int" />
+          <Property Name="sumofalpnumerology" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.onetwo' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="onetwo">
+          <Property Name="id" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.payroll' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="payroll">
+          <Property Name="pid" Type="int" />
+          <Property Name="pdate" Type="date" />
+          <Property Name="eid" Type="int" />
+        </EntityType>-->
+  <EntityType Name="pro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.product' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="product">
+          <Property Name="pid" Type="int" />
+          <Property Name="pname" Type="varchar" MaxLength="20" />
+          <Property Name="purchasemail" Type="varchar" MaxLength="45" />
+          <Property Name="phoneno" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'inter.dbo.prop' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="prop">
+          <Property Name="propid" Type="int" />
+          <Property Name="propname" Type="varchar" MaxLength="20" />
+          <Property Name="ownername" Type="varchar" MaxLength="24" />
+          <Property Name="posteddate" Type="date" />
+          <Property Name="proprice" Type="money" />
+          <Property Name="servicetype" Type="varchar" MaxLength="25" />
+        </EntityType>-->
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Year" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Warehouses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShopId" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+error 6004: The table 'inter.dbo.payroll' is referenced by a relationship, but cannot be found.
+        <Association Name="FK__payroll__eid__403A8C7D" />-->
+  <Association Name="fk_empid">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="department" Type="Self.department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="eid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShopWarehouse">
+    <End Role="Shops" Type="Self.Shops" Multiplicity="1" />
+    <End Role="Warehouses" Type="Self.Warehouses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shops">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Warehouses">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="interModelStoreContainer">
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pro" EntityType="Self.pro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Shops" EntityType="Self.Shops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warehouses" EntityType="Self.Warehouses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="databaselog" EntityType="Self.databaselog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [databaselog].[logid] AS [logid], 
+    [databaselog].[eventval] AS [eventval], 
+    [databaselog].[eventdate] AS [eventdate], 
+    [databaselog].[changedby] AS [changedby]
+    FROM [dbo].[databaselog] AS [databaselog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="emp" EntityType="Self.emp" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [emp].[ename] AS [ename], 
+    [emp].[eid] AS [eid], 
+    [emp].[salary] AS [salary]
+    FROM [dbo].[emp] AS [emp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="emp2" EntityType="Self.emp2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [emp2].[emp] AS [emp], 
+    [emp2].[ename] AS [ename]
+    FROM [dbo].[emp2] AS [emp2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="emplog" EntityType="Self.emplog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [emplog].[logid] AS [logid], 
+    [emplog].[empid] AS [empid], 
+    [emplog].[operation] AS [operation], 
+    [emplog].[updatedate] AS [updatedate], 
+    [emplog].[empname] AS [empname]
+    FROM [dbo].[emplog] AS [emplog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="movielog" EntityType="Self.movielog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [movielog].[logid] AS [logid], 
+    [movielog].[moviename] AS [moviename], 
+    [movielog].[ticketprice] AS [ticketprice], 
+    [movielog].[operation] AS [operation], 
+    [movielog].[changeddate] AS [changeddate]
+    FROM [dbo].[movielog] AS [movielog]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="fk_empid" Association="Self.fk_empid">
+      <End Role="employee" EntitySet="employee" />
+      <End Role="department" EntitySet="department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopWarehouse" Association="Self.FK_ShopWarehouse">
+      <End Role="Shops" EntitySet="Shops" />
+      <End Role="Warehouses" EntitySet="Warehouses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

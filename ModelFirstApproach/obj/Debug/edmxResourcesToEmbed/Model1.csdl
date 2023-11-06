@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Shops" EntityType="Model1.Shop" />
+    <EntitySet Name="Warehouses" EntityType="Model1.Warehouse" />
+    <AssociationSet Name="ShopWarehouse" Association="Model1.ShopWarehouse">
+      <End Role="Shop" EntitySet="Shops" />
+      <End Role="Warehouse" EntitySet="Warehouses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Shop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" />
+    <Property Name="Year" Type="String" Nullable="false" />
+    <NavigationProperty Name="Warehouses" Relationship="Model1.ShopWarehouse" FromRole="Shop" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Quantity" Type="String" Nullable="false" />
+    <Property Name="Price" Type="String" Nullable="false" />
+    <NavigationProperty Name="Shop" Relationship="Model1.ShopWarehouse" FromRole="Warehouse" ToRole="Shop" />
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="ShopWarehouse">
+    <End Type="Model1.Shop" Role="Shop" Multiplicity="1" />
+    <End Type="Model1.Warehouse" Role="Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\JeniferY\\Desktop\\iinterchange\\Console\\ASPMVCClass1\\MyDBFirst\\MyDBFirst.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\JeniferY\\Desktop\\iinterchange\\Console\\ASPMVCClass1\\MyDBFirst\\MyDBFirst.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JeniferY\\Desktop\\iinterchange\\Console\\ASPMVCClass1\\MyDBFirst\\MyDBFirst.csproj",
+        "projectName": "MyDBFirst",
+        "projectPath": "C:\\Users\\JeniferY\\Desktop\\iinterchange\\Console\\ASPMVCClass1\\MyDBFirst\\MyDBFirst.csproj",
+        "packagesPath": "C:\\Users\\JeniferY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JeniferY\\Desktop\\iinterchange\\Console\\ASPMVCClass1\\MyDBFirst\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JeniferY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Shops" EntityType="Model1.Store.Shops" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Warehouses" EntityType="Model1.Store.Warehouses" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ShopWarehouse" Association="Model1.Store.ShopWarehouse">
+      <End Role="Shop" EntitySet="Shops" />
+      <End Role="Warehouse" EntitySet="Warehouses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Year" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Warehouses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShopId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ShopWarehouse">
+    <End Role="Shop" Type="Model1.Store.Shops" Multiplicity="1" />
+    <End Role="Warehouse" Type="Model1.Store.Warehouses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shop">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

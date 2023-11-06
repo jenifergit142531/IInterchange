@@ -1,0 +1,10 @@
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\obj\Debug\MyDBFirst.csproj.AssemblyReference.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\obj\Debug\MyDBFirst.csproj.CoreCompileInputs.cache
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\bin\Debug\MyDBFirst.exe.config
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\bin\Debug\MyDBFirst.exe
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\bin\Debug\MyDBFirst.pdb
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\bin\Debug\EntityFramework.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\obj\Debug\MyDBFirst.csproj.CopyComplete
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\obj\Debug\MyDBFirst.exe
+C:\Users\JeniferY\Desktop\iinterchange\Console\ASPMVCClass1\MyDBFirst\obj\Debug\MyDBFirst.pdb

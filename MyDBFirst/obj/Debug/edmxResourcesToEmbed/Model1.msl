@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="interModelStoreContainer" CdmEntityContainer="interEntities1">
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="interModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="custid" ColumnName="custid" />
+          <ScalarProperty Name="cuscode" ColumnName="cuscode" />
+          <ScalarProperty Name="cusname" ColumnName="cusname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="interModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="deptid" ColumnName="deptid" />
+          <ScalarProperty Name="dname" ColumnName="dname" />
+          <ScalarProperty Name="eid" ColumnName="eid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="interModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="eid" ColumnName="eid" />
+          <ScalarProperty Name="ename" ColumnName="ename" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pros">
+      <EntityTypeMapping TypeName="interModel.pro">
+        <MappingFragment StoreEntitySet="pro">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shops">
+      <EntityTypeMapping TypeName="interModel.Shop">
+        <MappingFragment StoreEntitySet="Shops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouses">
+      <EntityTypeMapping TypeName="interModel.Warehouse">
+        <MappingFragment StoreEntitySet="Warehouses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="databaselogs">
+      <EntityTypeMapping TypeName="interModel.databaselog">
+        <MappingFragment StoreEntitySet="databaselog">
+          <ScalarProperty Name="logid" ColumnName="logid" />
+          <ScalarProperty Name="eventval" ColumnName="eventval" />
+          <ScalarProperty Name="eventdate" ColumnName="eventdate" />
+          <ScalarProperty Name="changedby" ColumnName="changedby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emps">
+      <EntityTypeMapping TypeName="interModel.emp">
+        <MappingFragment StoreEntitySet="emp">
+          <ScalarProperty Name="ename" ColumnName="ename" />
+          <ScalarProperty Name="eid" ColumnName="eid" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emp2">
+      <EntityTypeMapping TypeName="interModel.emp2">
+        <MappingFragment StoreEntitySet="emp2">
+          <ScalarProperty Name="emp" ColumnName="emp" />
+          <ScalarProperty Name="ename" ColumnName="ename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emplogs">
+      <EntityTypeMapping TypeName="interModel.emplog">
+        <MappingFragment StoreEntitySet="emplog">
+          <ScalarProperty Name="logid" ColumnName="logid" />
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="operation" ColumnName="operation" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="empname" ColumnName="empname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="movielogs">
+      <EntityTypeMapping TypeName="interModel.movielog">
+        <MappingFragment StoreEntitySet="movielog">
+          <ScalarProperty Name="logid" ColumnName="logid" />
+          <ScalarProperty Name="moviename" ColumnName="moviename" />
+          <ScalarProperty Name="ticketprice" ColumnName="ticketprice" />
+          <ScalarProperty Name="operation" ColumnName="operation" />
+          <ScalarProperty Name="changeddate" ColumnName="changeddate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

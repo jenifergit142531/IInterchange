@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "43frVnkoLNAjLhTj8ZGwX8MkQIhdh2q9DPjlBgQKaO1xf5CoR+1jPUW7Cblwb06pqstpnll6V1yHWLDVW3VQfA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JeniferY\\Desktop\\iinterchange\\Console\\ASPMVCClass1\\MyDBFirst\\MyDBFirst.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JeniferY\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}

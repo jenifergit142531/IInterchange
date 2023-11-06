@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="interModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="custid" />
+    </Key>
+    <Property Name="custid" Type="Int32" Nullable="false" />
+    <Property Name="cuscode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cusname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="deptid" />
+    </Key>
+    <Property Name="deptid" Type="Int32" Nullable="false" />
+    <Property Name="dname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="eid" Type="Int32" />
+    <NavigationProperty Name="employee" Relationship="Self.fk_empid" FromRole="department" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" />
+    <Property Name="ename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="salary" Type="Int32" />
+    <NavigationProperty Name="departments" Relationship="Self.fk_empid" FromRole="employee" ToRole="department" />
+  </EntityType>
+  <EntityType Name="pro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Shop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Warehouses" Relationship="Self.FK_ShopWarehouse" FromRole="Shops" ToRole="Warehouses" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Quantity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShopId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Shop" Relationship="Self.FK_ShopWarehouse" FromRole="Warehouses" ToRole="Shops" />
+  </EntityType>
+  <EntityType Name="databaselog">
+    <Key>
+      <PropertyRef Name="logid" />
+      <PropertyRef Name="changedby" />
+    </Key>
+    <Property Name="logid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="eventval" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="eventdate" Type="DateTime" Precision="3" />
+    <Property Name="changedby" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="emp">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="ename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="eid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="salary" Type="Double" />
+  </EntityType>
+  <EntityType Name="emp2">
+    <Key>
+      <PropertyRef Name="emp" />
+    </Key>
+    <Property Name="emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ename" Type="String" MaxLength="21" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emplog">
+    <Key>
+      <PropertyRef Name="logid" />
+      <PropertyRef Name="empid" />
+      <PropertyRef Name="updatedate" />
+    </Key>
+    <Property Name="logid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="empid" Type="Int32" Nullable="false" />
+    <Property Name="operation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="updatedate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="empname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="movielog">
+    <Key>
+      <PropertyRef Name="logid" />
+    </Key>
+    <Property Name="logid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="moviename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ticketprice" Type="Int32" />
+    <Property Name="operation" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="changeddate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="fk_empid">
+    <End Role="employee" Type="Self.employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="department" Type="Self.department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employee">
+        <PropertyRef Name="eid" />
+      </Principal>
+      <Dependent Role="department">
+        <PropertyRef Name="eid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShopWarehouse">
+    <End Role="Shops" Type="Self.Shop" Multiplicity="1" />
+    <End Role="Warehouses" Type="Self.Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shops">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Warehouses">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="interEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="departments" EntityType="Self.department" />
+    <EntitySet Name="employees" EntityType="Self.employee" />
+    <EntitySet Name="pros" EntityType="Self.pro" />
+    <EntitySet Name="Shops" EntityType="Self.Shop" />
+    <EntitySet Name="Warehouses" EntityType="Self.Warehouse" />
+    <EntitySet Name="databaselogs" EntityType="Self.databaselog" />
+    <EntitySet Name="emps" EntityType="Self.emp" />
+    <EntitySet Name="emp2" EntityType="Self.emp2" />
+    <EntitySet Name="emplogs" EntityType="Self.emplog" />
+    <EntitySet Name="movielogs" EntityType="Self.movielog" />
+    <AssociationSet Name="fk_empid" Association="Self.fk_empid">
+      <End Role="employee" EntitySet="employees" />
+      <End Role="department" EntitySet="departments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopWarehouse" Association="Self.FK_ShopWarehouse">
+      <End Role="Shops" EntitySet="Shops" />
+      <End Role="Warehouses" EntitySet="Warehouses" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

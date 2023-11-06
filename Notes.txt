@@ -1,0 +1,119 @@
+
+
+
+Agenda :
+
+- Web Application
+
+- communicate across the network 
+
+How ?
+
+- Client side : code runs on the browser
+eg : html , css,ajax
+
+- Server side : code that runs on the server
+
+eg: c#,java,python 
+
+Web browser vs Web Server :
+
+WB : Client side software that locate some content (audio,video,text,images,link...)
+
+WS : Browser --->client make REQUEST --->SERVER(Process your request)
+-----> Response 
+
+HTTP : Hyper text transfer protocol
+HTTPS : http + security
+
+https://localhost:44388/
+
+console ---> windows ---> web form ---> web application(MVC)---> WEBAPI
+
+Disadvantage :
+
+- all code in one place(design / source)
+- difficulty to develop and debug
+- Single change / refresh - entire page has to reload again
+
+Web Appplication (MVC):
+
+- Model - view - controller 
+
+- Design pattern
+
+database layer - presentation layer - business logic layer
+
+- seperation of concern 
+- Modularity in the application 
+
+Model : data
+View : UI
+Controller : interact with data and UI - CRUD Logic 
+
+Request Life Cycle OF MVC :
+
+
+Request----->(steps involved)--->response
+
+
+Http request --> Middleware ---> Routing ----> Controller ----> 
+Action Methods  ----> View(Render)----> Response
+
+
+
+Middleware ??
+
+Handle the request and response pipeline
+
+Routing ???
+
+Navigating to the requested page 
+
+Controller ??
+
+Hold the business logic
+
+Action methods ??
+
+methods that execute the logic
+
+View ??
+
+Render the output on the browser screen
+
+LaunchSettings.json : Browser url information
+
+wwwroot : static files 
+
+appsettings.json : Sensitive data (dbconnection ,apikey,passwords)
+
+Controller :
+
+- Logic 
+- Handle the user actions
+- Render the view
+- Create Controller only inside the controller folder
+- Controller name must always begin with Capital letter 
+- suffixed with controller keyword
+- contain multiple action methods
+
+Action methods :
+
+- methods inside the controller
+- should have a logic
+- all the action methods must be public
+- Httpverbs (get,put,post,delete)
+
+C - HTTPPOST
+R - HTTPGET
+U - HTTPPUT
+D - HTTPDELETE 
+
+- [NonAction] - will not be executed
+- [ActionName("anynamehere")]
+
+https://localhost:7225/property/propcheck
+
+https://localhost:44313/property/visit
+
