@@ -1,7 +1,14 @@
+using aspclass2.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<PropertyContext>(
+    options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("PropertyConnection")));
 
 var app = builder.Build();
 
@@ -20,17 +27,17 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseEndpoints(Endpoint =>
+/*app.UseEndpoints(Endpoint =>
 {
     Endpoint.MapControllers();
-});
+});*/
 
-/*app.MapControllerRoute(
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "Fera",
-    pattern: "{controller=Property}/{action=Home}/{id?}");
-*/
+    pattern: "{controller=Properties}/{action=Index}/{id?}");
+
 app.Run();

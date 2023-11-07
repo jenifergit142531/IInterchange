@@ -7,7 +7,9 @@ Agenda :
 - Understanding models
 - Model validation
 - Model Binding
-- Data handling using EF Core
+- Data handling using EF
+
+Core
 
 Routing :
 
@@ -50,3 +52,79 @@ Range
 RegEx
 Email
 String Length
+
+
+EF Approach :
+
+1. Code first approach
+
+Step 1 : Add the ef packages
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+Step 2 : Design the data model (Create a class)
+
+  public class Property
+    {
+        [Key]
+        public Guid PropId { get; set; } = Guid.NewGuid();
+        [Required (ErrorMessage ="Property Name is required")]
+        public string PropName { get; set; }
+
+        
+        [StringLength(maximumLength:15,MinimumLength =6,ErrorMessage ="name should have 6 - 15 characters")]
+        public string OwnerName { get; set; }
+
+        [Range(0,15,ErrorMessage ="Property age should be 0 - 15 years old")]
+        public int PropAge { get; set; }
+
+        [EmailAddress(ErrorMessage ="Email id is invalid")]
+        public string Email { get; set; }
+
+       
+        public int Price { get; set; }
+
+        public DateTime PostedDate { get; set; }
+
+
+    }
+
+    Step 3 : Configure the data source
+
+    appsettings.json :
+
+    "ConnectionStrings": {
+    "PropertyConnection": "Data Source=REV-PG02C4Y5;Initial Catalog=property;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False;Command Timeout=0"
+  },
+
+  Step 4 : Configure the context class
+
+  Dbcontext : Establish the database connection
+
+  Dbset :create the tables in the database
+
+  public class PropertyContext : DbContext
+    {
+        public PropertyContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public DbSet<Property> Properties { get; set; }
+    }
+
+    Step 5 : Configure the service in program.cs
+
+    builder.Services.AddDbContext<PropertyContext>(
+    options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("PropertyConnection")));
+
+   Step 6 : Migration 
+
+   add-migration 'propertymigrate'
+   update-database
+
+   Step 7 : Configure the controller with views using ef
+
+   Step 8 : Run the application
