@@ -1,0 +1,52 @@
+
+
+
+Agenda :
+
+- Routing
+- Understanding models
+- Model validation
+- Model Binding
+- Data handling using EF Core
+
+Routing :
+
+navigating from one page to another page
+
+Types :
+
+1.Conventional Routing
+
+app.MapControllerRoute(
+    name: "Fera",
+    pattern: "{controller=Property}/{action=Home}/{id?}");
+
+
+2.Attribute Routing
+
+[Route("routename")]
+
+
+app.UseEndpoints(Endpoint =>
+{
+    Endpoint.MapControllers();
+});
+
+https://localhost:7115/fera
+
+
+Models :
+
+It will deal with the data like sql server,oracle,json server,mongodb,xml,text.
+
+Model Validation :
+
+Check if the data is meeting the criteria
+
+Data annotations :
+
+Required
+Range
+RegEx
+Email
+String Length
