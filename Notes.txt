@@ -1,0 +1,55 @@
+
+
+
+Agenda :
+
+- Project presentation
+- Database first approach 
+
+Database first approach :
+
+Database(tables)-----> application
+
+
+Steps :
+
+step 1: Install the packages 
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+Step 2 : Create the table in database
+
+create database propcare
+
+create table LuxePropMgmt(propid uniqueidentifier default newid() primary key,
+pname varchar(20),
+partnername varchar(20),
+address varchar(20),
+service varchar(20),
+requesteddate datetime,
+duration int)
+
+Step 3 : Scaffold (convert table to class)
+
+scaffold-dbcontext "Data Source=REV-PG02C4Y5;Initial Catalog=propcare;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False;Command Timeout=0" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Step 4 : Configure datasource appsettings.json
+
+"ConnectionStrings": {
+    "LuxepropConnection": "Data Source=REV-PG02C4Y5;Initial Catalog=propcare;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False;Command Timeout=0"
+  },
+
+
+Step 5 : Resolve the service in program.cs
+
+builder.Services.AddDbContext<PropcareContext>(
+    options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString("LuxepropConnection"))
+    );
+
+Step 6 : Build the application.Configure the controller with views using EF
+
+
+Step 7: Run the application 
