@@ -3,3 +3,34 @@
 Agenda :
 
 - Practise DBfirst approach
+- User secrets
+- Using ado.net in web app
+
+
+User secret :
+
+- Security in your application
+- secure sensitive data like connection string , pwds,api key
+- secrets.json 
+
+Steps :
+
+1. Microsoft.Extensions.Configuration.UserSecrets
+
+2. Right click your application and click manage user secrets 
+
+secrets.json file will be created and configure the data source
+
+{
+  "ConnectionStrings": {
+    "ElecConnection": "Data Source=REV-PG02C4Y5;Initial Catalog=mydbfirst;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False;Command Timeout=0"
+  }
+}
+
+3. Go to program.cs and configure the service
+
+builder.Configuration.AddEnvironmentVariables().AddUserSecrets(Assembly.GetExecutingAssembly(), true);
+
+
+4.Configure the controller
+
