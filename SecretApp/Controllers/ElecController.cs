@@ -13,12 +13,12 @@ namespace SecretApp.Controllers
             Configuration = configuration;
         }
 
-       
+
 
         public IActionResult Index()
         {
             List<ElecInventory> inventoryList = new List<ElecInventory>();
-            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = Configuration["ConnectionStrings:ElecConnection"];
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
@@ -26,7 +26,7 @@ namespace SecretApp.Controllers
                 SqlCommand cmd = new SqlCommand(selectQuery, con);
                 using (SqlDataReader sdr = cmd.ExecuteReader())
                 {
-                    while(sdr.Read())
+                    while (sdr.Read())
                     {
                         ElecInventory inventory = new ElecInventory();
                         inventory.Id = Convert.ToInt32(sdr["id"]);
@@ -37,11 +37,39 @@ namespace SecretApp.Controllers
                         inventoryList.Add(inventory);
 
                     }
-                    con.Close();
+
                 }
+                con.Close();
             }
 
-                return View(inventoryList);
+            return View(inventoryList);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(ElecInventory inventory)
+        {
+            string connectionString = Configuration["ConnectionStrings:ElecConnection"];
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+               
+                string insertQuery = $"insert into ElecInventory(id,pname,price,quantity,updateddate)" +
+                    $"values ('{inventory.Id}','{inventory.Pname}','{inventory.Price}','{inventory.Quantity}','{inventory.Updateddate}')";
+                SqlCommand cmd = new SqlCommand(insertQuery, con);
+                {
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
+
+                return RedirectToAction("Index");
+            }
         }
     }
 }
