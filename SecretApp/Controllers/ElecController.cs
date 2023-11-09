@@ -79,9 +79,10 @@ namespace SecretApp.Controllers
             string connectionString = Configuration["ConnectionStrings:ElecConnection"];
             using (SqlConnection con = new SqlConnection(connectionString))
             {
+                con.Open();
 
                 string getId = $"select * from ElecInventory where id='{id}'";
-                con.Open();
+                
                 SqlCommand cmd = new SqlCommand(getId, con);
                 using (SqlDataReader sdr = cmd.ExecuteReader())
                 {
@@ -105,7 +106,7 @@ namespace SecretApp.Controllers
             return View(inventory);
         }
 
-        [HttpPut]
+        [HttpPost]
         public IActionResult Update(ElecInventory inventory, int id)
         {
             string connectionString = Configuration["ConnectionStrings:ElecConnection"];
@@ -129,13 +130,13 @@ namespace SecretApp.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpPost]
         public IActionResult Delete(int id)
         {
             string connectionString = Configuration["ConnectionStrings:ElecConnection"];
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string deleteQuery = "delete from ElecInventory where id='{id}'";
+                string deleteQuery = $"delete from ElecInventory where id='{id}'";
                 using (SqlCommand cmd = new SqlCommand(deleteQuery, con))
                 {
                     con.Open();
