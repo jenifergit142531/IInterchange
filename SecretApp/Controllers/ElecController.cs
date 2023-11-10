@@ -129,6 +129,39 @@ namespace SecretApp.Controllers
                 return RedirectToAction("Index");
             }
         }
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            ElecInventory inventory = new ElecInventory();
+            string connectionString = Configuration["ConnectionStrings:ElecConnection"];
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                string getId = $"select * from ElecInventory where id='{id}'";
+
+                SqlCommand cmd = new SqlCommand(getId, con);
+                using (SqlDataReader sdr = cmd.ExecuteReader())
+                {
+                    while (sdr.Read())
+                    {
+
+                        inventory.Id = Convert.ToInt32(sdr["id"]);
+                        inventory.Pname = Convert.ToString(sdr["pname"]);
+                        inventory.Price = Convert.ToInt32(sdr["price"]);
+                        inventory.Quantity = Convert.ToInt32(sdr["quantity"]);
+                        inventory.Updateddate = Convert.ToDateTime(sdr["updateddate"]);
+
+
+                    }
+
+                }
+                con.Close();
+
+            }
+
+            return View(inventory);
+        }
 
         [HttpPost]
         public IActionResult Delete(int id)
@@ -136,15 +169,16 @@ namespace SecretApp.Controllers
             string connectionString = Configuration["ConnectionStrings:ElecConnection"];
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string deleteQuery = $"delete from ElecInventory where id='{id}'";
+                string deleteQuery = $"delete from ElecInventory where Id='{id}'";
                 using (SqlCommand cmd = new SqlCommand(deleteQuery, con))
                 {
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+          
         }
     }
 }
