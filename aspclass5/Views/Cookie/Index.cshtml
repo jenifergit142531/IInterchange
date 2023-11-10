@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@if(!string.IsNullOrWhiteSpace(Model))
+{
+    <div>
+        Welcome User
+        @Html.ActionLink("Forget Me","RemoveCookie")
+    </div>
+}
+
+else
+
+{
+    
+    <form asp-action="Index">
+        <h5>Looks like its your first time here</h5>
+        <label>Please enter the User Name :</label>
+       @Html.TextBox("userName")
+       <div>
+           <input type="submit" values="create cookie" class="btn btn-primary">
+       </div>
+
+      
+       
+    </form>
+}

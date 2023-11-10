@@ -22,5 +22,74 @@ Viewbag : Container
 - does not care for the data type
 
 ViewData :
-- Check for the datatype
+- Check for the datatype,cast the required type before using it
+
+
+State management :
+
+- Preserve the state of the webpage / object/ data / application values 
+
+Client side : happens in the browser / client computer
+
+Server side : stores the data in the server side
+
+
+Client side SM :
+
+1.Cookies
+2.Query String
+3.Hidden field
+4.View data
+5.View Bag
+6.Temp Data
+
+Server side SM :
+
+Session
+
+Why we need state management ??
+
+- HTTP - Hyper text transfer protocol
+
+- By default it is stateless
+
+https://localhost:7122/
+
+
+Cookie : 
+
+Stores the data in the browser
+- Please do not save any sensitive data on the cookie
+
+Query String :
+
+when you pass data from one page to another page over the URL
+
+?
+
+
+https://localhost:7122/query/displaydata?name=fera
+
+employee/edit/100
+
+Hidden Field :
+
+- Hide your data on the client
+- It is available on the page source , but not visible on the browers
+- Good to use for sensitive data
+
+
+Temp Data : 
+
+-  RedirectToAction
+
+Session SM:
+
+- Store the data in server side
+- Associated with every web page
+- Log out / expires / time out if the session is unused for sometime 
+
+
+Aspnetcore.session
+
 

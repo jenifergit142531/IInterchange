@@ -16,8 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\JeniferY\Desktop\iinterchange\Console\aspclass5\aspclass5
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Cookie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29va2llXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Hidden/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlkZGVuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Query/DisplayData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVlcnlcRGlzcGxheURhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Session/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vzc2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Session/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vzc2lvblxTaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Shared/Error.cshtml]
@@ -26,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Shop/DisplayMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEaXNwbGF5TWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JeniferY/Desktop/iinterchange/Console/aspclass5/aspclass5/Views/Shop/Index.cshtml]

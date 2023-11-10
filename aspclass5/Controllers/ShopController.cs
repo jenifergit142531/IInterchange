@@ -9,6 +9,7 @@ namespace aspclass5.Controllers
         {
             ViewData["welcome"] = "Welcome to the property botique shop";
             ViewBag.greetings = "Welcome all..Get 20% on your first service";
+            TempData["message"] = "Hello from Temp Data";
             return View();
         }
         public IActionResult Purchase()
@@ -39,8 +40,15 @@ namespace aspclass5.Controllers
             };
             // ViewBag.ShopDetails = ls;
             ViewData["ShopDetails"] = ls;
+            
            
             return View();
+        }
+
+        public IActionResult DisplayMessage()
+        {
+            string message = TempData["message"] as string;
+            return View("DisplayMessage", message);
         }
     }
 }
