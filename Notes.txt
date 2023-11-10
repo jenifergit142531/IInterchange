@@ -1,0 +1,26 @@
+
+
+Agenda :
+
+- Razor pages / view
+- State management 
+- custom Middleware
+
+
+Razor pages : both client + server syntax
+
+@{
+
+} - Razor syntax
+
+
+cshtml ---> cs + html
+
+Razor view : pass the data from the controller to the view 
+
+Viewbag : Container 
+- does not care for the data type
+
+ViewData :
+- Check for the datatype
+

@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Shopping>
+<div>
+    @{
+        <p>
+        @foreach(var i in (IEnumerable<Shopping>) ViewData["ShopDetails"])
+            {
+                <table>
+                <tr>
+                <td>Registration Number</td>
+                <td>@i.RegNo</td>
+                </tr>
+                  <tr>
+                <td>Shop Name</td>
+                <td>@i.ShopName</td>
+                </tr>
+                  <tr>
+                <td>Location</td>
+                <td>@i.Location</td>
+                </tr>
+                  <tr>
+                <td>Customer Rating</td>
+                <td>@i.CustomerRating</td>
+                </tr>
+                </table>
+            }
+
+        </p>
+    }
+</div>
