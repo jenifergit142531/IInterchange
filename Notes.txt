@@ -1,0 +1,133 @@
+
+
+
+Agenda :
+
+- Introduction to Web API
+- What is web service
+- Why ??
+- Implementation
+- SOAP vs REST
+- REST Principles
+- REST vs RESTFUL Services
+- Install Postman
+- Methods in API
+- Create a simple web api
+- Content Negotiation - supports diff data formats
+- Routing 
+- Data Binding
+- HTTP Status codes 
+
+Introduction :
+
+API => Application programming interface 
+
+Intermediate software that handles the request and response in various clients  
+(mobile,laptop,desktop)
+
+Web service :
+
+-Software that runs on diff platform and interact with multiple machines to share the data
+
+Implementation :
+
+- WCF - Windows communication foundation 
+
+- SOAP - Simple object access protocol
+
+=> Create a web service 
+=> Understand XML Format 
+=> <></>
+=> Returns xml data
+=> write the code in markup<tag> format
+<soapenvelop>
+<soapheader>.hjdhfwgk</soapheader>
+<soapbody>khagdlkdq</soapbody>
+<soapfault>jvfdakhdfl</soapfault>
+<soapenvelop>
+
+- REST
+
+* Architectural style to create web api
+* Representational state transfer
+
+REST Principles
+
+1.Statelessness
+
+- each request is independent and does not rely on previous request
+
+2.Client server architecture
+
+- Seperation of concern 
+
+3.Uniform Interface 
+
+- Resource Identification and manipulation
+
+4.Cacheability
+
+- Frquently accessed resources/ pages stored on cache
+
+5.Layered System
+
+-  RESTful system has many layers - logic , model
+
+6.Code On Demand(Optional)
+
+- it allows server to provide executable code (eg.js) to the client.
+- optional one
+- it should be enough to sent response rather than code 
+
+REST vs RESTFUL Services :
+
+REST : Set of rules / principles
+
+RESTFUL Service : applications that you create following thoses REST priciples
+
+REST API :
+
+- http request & http response
+- easy to implement
+- supports HTTP Verbs
+
+HTTP Methods \ Verbs :
+
+HTTPPOST   - CREATE
+HTTPGET    - READ
+HTTPPUT    - UPDATE
+HTTPDELETE - DELETE
+
+Protocol = http ,https
+Testing = Postman / fiddler /swagger
+
+- HTTP Status codes 
+
+* Response body of the web api 
+
+100 - Informational
+200 - Success
+300 - Redirectional / dependency
+400 - Client side error
+500 - Server side error
+
+- Data binding :
+
+* Binds model to controller
+
+Routing : Navigating from one page to another page
+
+
+-------------------------CORE ASPMVC ------------------------------
+
+Globalization & Localization :
+
+Globalization : Process of designing the web page that support different culture
+- Add support to input ,display,output must be related to specific geographic location
+
+Localization : Process of adapting to the global size
+
+- specific culture / locale information while creating the application
+
+Internalization : Support globalization & Localization 
+

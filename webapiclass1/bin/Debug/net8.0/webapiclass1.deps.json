@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "webapiclass1/1.0.0": {
+        "runtime": {
+          "webapiclass1.dll": {}
+        },
+        "resources": {
+          "en-US/webapiclass1.resources.dll": {
+            "locale": "en-US"
+          },
+          "fr-FR/webapiclass1.resources.dll": {
+            "locale": "fr-FR"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "webapiclass1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
