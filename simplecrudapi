@@ -1,3 +1,14 @@
+Language.cs
+
+public class Language
+   {
+       public int Id { get; set; }
+       public string Name { get; set; }
+   }
+
+
+
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using webapiclass1.Models;
