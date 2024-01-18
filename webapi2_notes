@@ -100,7 +100,7 @@ Lifetime service Registrations
 
 3 types
 
-1.Singleton
-2.Scoped
-3.Transient
+1.Singleton - instance is created only once for the entire execution
+2.Scoped - instance created for every request,but when it is within the same scope then it is reused.
+3.Transient - each time the service is called , new instance is created.
 
