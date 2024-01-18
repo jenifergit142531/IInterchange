@@ -1,0 +1,106 @@
+
+
+Agenda :
+
+- CRUD using EF
+- Dependency Injection and Lifetime registrations
+
+
+Code first approach :
+
+Steps 
+
+1.Install the packages
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+
+2.Create a data model
+
+public class PropRent
+    {
+        [Key]
+        public int PropId { get; set; }
+        public string Address { get; set; }
+        public string AgentName { get; set; }
+        public int MonthlyRental { get; set; }
+        public int Tenure { get; set; }
+
+
+    }
+
+3.Configure the DBContext and DBSet
+
+public class RentalContext : DbContext
+    {
+        public RentalContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        public DbSet<PropRent> propRents { get; set; }
+    }
+
+
+4.Configure the data source in appsettings.json 
+
+ "ConnectionStrings": {
+    "RentalConnection": "Data Source=REV-PG02C4Y5;Initial Catalog=inter;Integrated Security=True;Persist Security Info=False;Pooling=False;Multiple Active Result Sets=False;Encrypt=False;Trust Server Certificate=False;Command Timeout=0"
+  },
+
+5.configure the middlware (program.cs)
+
+builder.Services.AddDbContext<RentalContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RentalConnection"));
+    
+    
+    });
+
+6. PM commands 
+
+add-migration 'RentalMigrate'
+update-database
+
+7.Scaffold the API Controller with actions 
+
+8.Build and run
+
+Dependency Injection & Lifetime service Registrations :
+
+What is DI ?
+
+- Software design pattern that ensures loosely coupled code 
+- Implementing  the DI is the best practices
+
+
+class ob1=new class()  //tightly coupled one
+class ob2=new class()
+
+interface inob;  - m1,m2,m3
+
+class(inob)   //loosely coupled code 
+
+Problem with our example :
+
+- what if i wanted to create a better player class ???
+
+- Rewrite the code and create new objects 
+
+- as the class increases the objects increases occupying more memory
+
+Solution :
+
+Dependency injection concept
+
+
+Lifetime service Registrations 
+
+3 types
+
+1.Singleton
+2.Scoped
+3.Transient
+
