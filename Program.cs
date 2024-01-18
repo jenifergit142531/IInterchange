@@ -18,8 +18,8 @@ builder.Services.AddDbContext<RentalContext>(options =>
 
 //DI Services
 
-builder.Services.AddTransient<IPlayer, PlayerGenerator>();
-builder.Services.AddTransient<IPlayer, BetterPlayerGenerator>();
+builder.Services.AddScoped<IPlayer, PlayerGenerator>();
+//builder.Services.AddScoped<IPlayer, BetterPlayerGenerator>();
 
 var app = builder.Build();
 

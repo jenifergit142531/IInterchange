@@ -4,7 +4,8 @@ namespace webapi2.Repo
 {
     public interface IPlayer
     {
-        Player CreateNewPlayer();
+        Player CreateAllNewPlayer();
+        Player CreateBetterPlayer();
 
 
     }

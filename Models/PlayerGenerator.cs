@@ -8,7 +8,7 @@ namespace webapi2.Models
         private readonly string[] _maleNames = { "Jon", "Mark", "Steve", "Dan" };
         private readonly string[] _femaleNames = { "Amy", "Kate", "Julie", "Safine" };
 
-        public Player CreateNewPlayer()
+        public Player CreateAllNewPlayer()
         {
             string playerName;
             var random = new Random();
@@ -35,5 +35,21 @@ namespace webapi2.Models
                 MaxScore = playerScore
             };
         }
+
+        public Player CreateBetterPlayer()
+        {
+            var random = new Random();
+            var playerGenderIndex = random.Next(2);
+            var playerHairIndex = random.Next(3);
+            return new Player
+            {
+                PlayerName = "Swetha",
+                Age = 20,
+                Gender = (Gender)playerGenderIndex,
+                HairColor = (Haircolor)playerHairIndex,
+                MaxScore = 100
+            };
+        }
     }
-}
+    }
+

@@ -1,11 +1,17 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using System;
 using webapi2.Repo;
 
 namespace webapi2.Models
 {
     public class BetterPlayerGenerator : IPlayer
     {
-        public Player CreateNewPlayer()
+        public Player CreateAllNewPlayer()
+        {
+            return new Player();
+        }
+
+        public Player CreateBetterPlayer()
         {
             var random = new Random();
             var playerGenderIndex = random.Next(2);

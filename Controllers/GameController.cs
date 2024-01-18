@@ -26,7 +26,7 @@ namespace webapi2.Controllers
         {
             //WITH DI
 
-            var newPlayer = _Iplayer.CreateNewPlayer();
+            var newPlayer = _Iplayer.CreateAllNewPlayer();
             return Ok(newPlayer);
 
 
@@ -44,7 +44,7 @@ namespace webapi2.Controllers
         {
             //with DI 
 
-            var betterPlayer = _Iplayer.CreateNewPlayer();
+            var betterPlayer = _Iplayer.CreateBetterPlayer();
             return Ok(betterPlayer); 
 
 
@@ -55,3 +55,5 @@ namespace webapi2.Controllers
         }
     }
 }
+
+//C:\Users\JeniferY\Desktop\iinterchange\Console\webapi2\webapi2\webapi2.csproj
