@@ -1,3 +1,13 @@
+app.settings.Json:
+
+"Jwt": {
+  "Issuer": "https://jeni.com/",
+  "Audience": "https://jeni.com/",
+  "Key": "This is a secret key- hgdtvubknbygknimomnljmgynbijnkgjybunikiugbfytdbjgknhkh"
+},
+
+
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
