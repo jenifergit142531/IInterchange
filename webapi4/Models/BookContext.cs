@@ -19,9 +19,9 @@ namespace webapi4.Models
             modelBuilder.Seed();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+      /*  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
-        }
+        }*/
     }
 }

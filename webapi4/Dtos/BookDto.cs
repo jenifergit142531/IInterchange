@@ -2,7 +2,7 @@
 
 namespace webapi4.Dtos
 {
-    public class BookDto
+  /*  public class BookDto
     {
         public int Bid { get; set; }
         public string BookName { get; set; }
@@ -11,5 +11,5 @@ namespace webapi4.Dtos
 
         public AuthorDto Author { get; set; }
 
-    }
+    }*/
 }

@@ -21,27 +21,39 @@ namespace webapi4.Controllers
         [Route("get")]
         public async Task<IActionResult> GetAllBooks()
         {
-            var books = await _context.Books.ToListAsync();
+            // var books = await _context.Books.ToListAsync();
 
-            var bookasDto = new List<BookDto>();
-            foreach(var book in books)
-            {
-                var bookDto = new BookDto
-                {
-                    Bid = book.Bid,
-                    BookName = book.BookName,
-                    Price = book.Price,
-                    Author = new AuthorDto
-                    {
-                        AuthorId = book.AuthorId,
-                        Name = book.Author.Name
-                    }
+            //implement eager loading isong Include()
+
+            var books = await _context.Books.Include(b => b.Author).ToListAsync();
+
+            /*   var bookasDto = new List<BookDto>();*/
+
+           /* var mybooklist = new List<Books>();
+               foreach(var book in books)
+               {
+                   var result = new Books
+                   {
+                       Bid = book.Bid,
+                       BookName = book.BookName,
+                       Price = book.Price,
+                       Author = new Authors
+                       {
+                           AuthorId = book.AuthorId,
+                           Name = book.Author.Name
+                       }
 
 
-                };
-                 bookasDto.Add(bookDto);
-            }
-            return Ok(bookasDto);
+                   };
+                mybooklist.Add(result);
+               }*/
+               return Ok(books);
+
+               
+
+           // return Ok(books);
+
+
         }
     }
 }

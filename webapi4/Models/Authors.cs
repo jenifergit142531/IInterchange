@@ -7,7 +7,7 @@ namespace webapi4.Models
         [Key]
         public int AuthorId { get; set; }
         public string Name { get; set; }
-        public virtual List<Books> Books { get; set; }
+        public List<Books> Books { get; set; }
 
     }
 }

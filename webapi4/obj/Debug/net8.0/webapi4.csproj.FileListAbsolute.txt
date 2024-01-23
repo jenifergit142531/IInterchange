@@ -130,5 +130,3 @@ C:\Users\JeniferY\Desktop\iinterchange\Console\webapi4\webapi4\obj\Debug\net8.0\
 C:\Users\JeniferY\Desktop\iinterchange\Console\webapi4\webapi4\obj\Debug\net8.0\webapi4.pdb
 C:\Users\JeniferY\Desktop\iinterchange\Console\webapi4\webapi4\obj\Debug\net8.0\webapi4.genruntimeconfig.cache
 C:\Users\JeniferY\Desktop\iinterchange\Console\webapi4\webapi4\obj\Debug\net8.0\ref\webapi4.dll
-C:\Users\JeniferY\Desktop\iinterchange\Console\webapi4\webapi4\bin\Debug\net8.0\Castle.Core.dll
-C:\Users\JeniferY\Desktop\iinterchange\Console\webapi4\webapi4\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
