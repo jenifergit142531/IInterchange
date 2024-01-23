@@ -6,7 +6,10 @@ namespace webapi4.Models
     {
         public BookContext(DbContextOptions options) : base(options)
         {
+            
         }
+
+      
 
         public DbSet<Books> Books { get; set; }
         public DbSet<Authors> Authors { get; set; }
@@ -14,6 +17,11 @@ namespace webapi4.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Seed();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseLazyLoadingProxies();
         }
     }
 }

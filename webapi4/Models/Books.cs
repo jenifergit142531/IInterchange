@@ -10,7 +10,7 @@ namespace webapi4.Models
         public int  Price { get; set; }
         public int AuthorId { get; set; }
 
-        public Authors Author { get; set; }
+        public virtual Authors Author { get; set; }
 
     }
 }
