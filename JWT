@@ -1,0 +1,236 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDbContext<UserContext>(options =>
+{
+    options.UseInMemoryDatabase("UserDetails");
+});
+
+builder.Services.AddAuthorization();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+    o.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+        ValidateLifetime = false
+
+    };
+});
+
+var app = builder.Build();
+
+
+// Configure the HTTP request pipeline.
+
+app.MapGet("/", () => "Welcome to minimal api ").RequireAuthorization();
+app.MapGet("/user", async (UserContext db) => await db.users.ToListAsync()).RequireAuthorization();
+app.MapGet("/user/id", async (int id, UserContext db) => await db.users.FindAsync(id)).RequireAuthorization();
+
+app.MapPost("/user/createtoken",
+    [AllowAnonymous](User usr) =>
+    {
+      if(usr.UserName=="jeni" && usr.Password=="jeni123")
+        {
+            var issuer = builder.Configuration["Jwt:Issuer"];
+            var audience = builder.Configuration["Jwt:Audience"];
+            var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim("Id", Guid.NewGuid().ToString()),
+                    new Claim(JwtRegisteredClaimNames.Sub, usr.UserName),
+                    new Claim(JwtRegisteredClaimNames.Email, usr.UserName),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+
+                }),
+
+                Expires = DateTime.UtcNow.AddMinutes(3),
+                Issuer = issuer,
+                Audience = audience,
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha512Signature)
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var jwtToken = tokenHandler.WriteToken(token);
+            var stringToken = tokenHandler.WriteToken(token);
+            return Results.Ok(stringToken);
+        }
+        return Results.Unauthorized();
+    });
+
+
+app.MapPost("/user", async (User usr, UserContext usrcxt) =>
+{
+    usrcxt.users.Add(usr);
+    await usrcxt.SaveChangesAsync();
+    return Results.Created($"/user/{usr.Id}", usr);
+});
+
+app.MapPut("/user/{id}", async (int id,User usr, UserContext usrcxt) =>
+{
+    var checkid = await usrcxt.users.FindAsync(id);
+    if (checkid is null)
+        return Results.NotFound();
+    checkid.UserName = usr.UserName;
+    checkid.Password = usr.Password;
+    await usrcxt.SaveChangesAsync();
+    return Results.Ok("success");
+});
+
+app.MapDelete("/user/{id}", async (int id,  UserContext usrcxt) =>
+{
+ 
+    if (await usrcxt.users.FindAsync(id) is User usr)
+    {
+        usrcxt.users.Remove(usr);
+        await usrcxt.SaveChangesAsync();
+        return Results.Ok("success");
+    }
+
+    return Results.NotFound();
+    
+  
+    
+});
+
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseHttpsRedirection();
+
+app.Run();
+
+public class User
+{
+    public int Id { get; set; }
+    public string UserName { get; set; }
+    public string Password { get; set; }
+}
+
+class UserContext : DbContext
+{
+    public UserContext(DbContextOptions options) : base(options) { }
+
+    public DbSet<User> users => Set<User>();
+}
+
+
+--------------------
+
+
+
+Workflow:
+
+
+- Create a minimal api
+
+- Create the API endpoints in the program.cs file
+
+- Add the packages
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
+
+
+- Configure the appsettings.json(secret file / key) file for the JWT Token
+
+* Issuer
+* Audience
+* Secret Key
+
+- Configure the Jwt authentication in the program.cs
+
+builder.Services.AddAuthorization();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+    o.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+        ValidateIssuer = true,  //Validate the server that generates token
+        ValidateAudience = true,  // validate the recipient 
+        ValidateIssuerSigningKey = true,  //validate the token signature
+        ValidateLifetime = false  // validate the lifetime of token
+
+    };
+});
+
+- Create the model called User to store the login credentials of the user
+
+- Specify the authentication settings 
+
+app.MapPost("/user/createtoken",
+    [AllowAnonymous](User usr) =>
+    {
+      if(usr.UserName=="jeni" && usr.Password=="jeni123")
+        {
+            var issuer = builder.Configuration["Jwt:Issuer"];
+            var audience = builder.Configuration["Jwt:Audience"];
+            var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim("Id", Guid.NewGuid().ToString()),
+                    new Claim(JwtRegisteredClaimNames.Sub, usr.UserName),
+                    new Claim(JwtRegisteredClaimNames.Email, usr.UserName),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+
+                }),
+
+                Expires = DateTime.UtcNow.AddMinutes(3),
+                Issuer = issuer,
+                Audience = audience,
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha512Signature)
+            };
+
+            - configuration for creating the token 
+
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var jwtToken = tokenHandler.WriteToken(token);
+            var stringToken = tokenHandler.WriteToken(token);
+            return Results.Ok(stringToken);
+
+            - Add the services to the middleware 
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            - Create and validate the JSON Web token in your application.
