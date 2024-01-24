@@ -1,0 +1,52 @@
+builder.Services.AddControllers().AddOData(options =>
+options
+.Select()
+.Filter()
+.OrderBy()
+.Count()
+.Expand()
+);
+
+
+
+Package : using Microsoft.AspNetCore.OData;
+
+
+
+
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.EntityFrameworkCore;
+using webapi4.Models;
+
+namespace webapi4.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class OdataController : ControllerBase
+    {
+        private readonly BookContext _context;
+
+        public OdataController(BookContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        [Route("getdata")]
+        [EnableQuery]
+        public async Task<IActionResult> GetAllBooks()
+        {
+            var books = await _context.Books.ToListAsync();
+            return Ok(books);
+
+
+
+        }
+    }
+}
+
+
+
