@@ -9,9 +9,9 @@ namespace webapi5.Controllers
     public class BulkController : ControllerBase
     {
         private readonly EmployeeService _employeeService;
-        public BulkController(EmployeeService _employeeService)
+        public BulkController(EmployeeService employeeService)
         {
-            _employeeService = _employeeService;
+            _employeeService = employeeService;
         }
 
         [HttpPost]

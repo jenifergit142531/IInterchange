@@ -10,8 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<EmpContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("EmpConnection")));
 
-builder.Services
-    .AddScoped<EmployeeService>();
+builder.Services.AddScoped<EmployeeService>();
 
 
 var app = builder.Build();
