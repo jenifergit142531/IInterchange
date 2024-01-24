@@ -49,4 +49,14 @@ namespace webapi4.Controllers
 }
 
 
+URL :
+
+https://localhost:7078/api/odata/getdata?filter=price gt 350
+
+https://localhost:7078/api/odata/getdata?$skip=1
+
+https://localhost:7078/api/odata/getdata?$select=bookname,price
+
+https://localhost:7078/api/odata/getdata?$orderby=bookname
+
 
