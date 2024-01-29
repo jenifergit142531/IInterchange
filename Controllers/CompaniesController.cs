@@ -44,6 +44,21 @@ namespace Webapi7.Controllers
             }
         }
 
+        [HttpGet("Multiresult/{id}")]
+       
+        public async Task<IActionResult> GetEmployeeByCompany(int id)
+        {
+
+            try
+            {
+                var companies = await _companyRepository.GetCompanyAndEmployee(id);
+                return Ok(companies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
 
     }
 }

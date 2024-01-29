@@ -6,5 +6,7 @@ namespace Webapi7.Contracts
     {
         public Task<IEnumerable<Company>> GetCompanies();
         public Task<Company> GetCompanyById(int id);
+
+        public Task<Company> GetCompanyAndEmployee(int id);
     }
 }
