@@ -74,7 +74,24 @@ namespace Webapi7.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-    
+
+
+        [HttpGet("GetbySP/{id}")]
+        public async Task<IActionResult> GetEmployeeByCompanySP(int id)
+        {
+
+            try
+            {
+                var companies = await _companyRepository.GetEmployeeAndCompanySP(id);
+                return Ok(companies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+
 
     }
 }

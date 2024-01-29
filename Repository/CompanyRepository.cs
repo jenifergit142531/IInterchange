@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using Webapi7.Context;
 using Webapi7.Contracts;
 using Webapi7.Models;
@@ -66,10 +67,10 @@ namespace Webapi7.Repository
                         return currentCompany;
                     });
                 return companies.Distinct().ToList();
-                
+
 
             }
-            
+
         }
 
 
@@ -85,6 +86,21 @@ namespace Webapi7.Repository
         }
 
 
+        //Using stored procedures on dapper
+        public async Task<Company> GetEmployeeAndCompanySP(int id)
+        {
+            var procedureName = "usp_select";
+            var parameters = new DynamicParameters();
+            parameters.Add("Id", id, DbType.Int32, ParameterDirection.Input);
+
+            using (var connection = _context.CreateConnection())
+            {
+                var company = await connection.QueryFirstOrDefaultAsync<Company>
+                    (procedureName, parameters, commandType: CommandType.StoredProcedure);
+                return company;
+
+            }
+        }
     }
 
        

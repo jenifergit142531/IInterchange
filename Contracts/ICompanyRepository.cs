@@ -11,5 +11,7 @@ namespace Webapi7.Contracts
 
         public Task<List<Company>> GetCompanyAndEmployeeMappingRelation();
 
+        public Task<Company> GetEmployeeAndCompanySP(int id);
+
     }
 }
