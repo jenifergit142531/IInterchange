@@ -45,7 +45,7 @@ namespace Webapi7.Controllers
         }
 
         [HttpGet("Multiresult/{id}")]
-       
+
         public async Task<IActionResult> GetEmployeeByCompany(int id)
         {
 
@@ -59,6 +59,22 @@ namespace Webapi7.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpGet("MultipleMapping")]
+        public async Task<IActionResult> GetEmployeeByCompanyMapping()
+        {
+
+            try
+            {
+                var companies = await _companyRepository.GetCompanyAndEmployeeMappingRelation();
+                return Ok(companies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+    
 
     }
 }

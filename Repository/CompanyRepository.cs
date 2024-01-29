@@ -25,16 +25,16 @@ namespace Webapi7.Repository
         }
 
         //multiple result set
-      
+
         public async Task<Company> GetCompanyAndEmployee(int id)
         {
             var query = "select * from companies where Id=@Id;" +
                 "select * from employees where CompanyId=@Id";
             using (var connection = _context.CreateConnection())
-                using(var multiresult=await connection.QueryMultipleAsync(query, new {id}))
+            using (var multiresult = await connection.QueryMultipleAsync(query, new { id }))
             {
                 var company = await multiresult.ReadSingleOrDefaultAsync<Company>();
-                if(company!=null)
+                if (company != null)
                 {
                     company.Employees = (await multiresult.ReadAsync<Employee>()).ToList();
                     return company;
@@ -44,6 +44,32 @@ namespace Webapi7.Repository
                     return null;
                 }
             }
+        }
+
+        //Mapping multiple tables with relationship
+
+        public async Task<List<Company>> GetCompanyAndEmployeeMappingRelation()
+        {
+            var query = "select * from companies c JOIN employees e on c.Id=e.CompanyId";
+            using (var connection = _context.CreateConnection())
+            {
+                var companyDict = new Dictionary<int, Company>();
+                var companies = await connection.QueryAsync<Company, Employee, Company>(
+                    query, (company, employee) =>
+                    {
+                        if (!companyDict.TryGetValue(company.Id, out var currentCompany))
+                        {
+                            currentCompany = company;
+                            companyDict.Add(currentCompany.Id, currentCompany);
+                        }
+                        currentCompany.Employees.Add(employee);
+                        return currentCompany;
+                    });
+                return companies.Distinct().ToList();
+                
+
+            }
+            
         }
 
 
@@ -57,5 +83,9 @@ namespace Webapi7.Repository
                 return company;
             }
         }
+
+
     }
+
+       
 }
