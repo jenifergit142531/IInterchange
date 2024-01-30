@@ -19,5 +19,9 @@ namespace Webapi7.Contracts
 
         public Task<Company> AddCompany(Company company);
 
+        public Task AddMultipleCompanies(List<Company> company);
+
+        
+
     }
 }

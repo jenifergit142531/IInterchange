@@ -27,10 +27,40 @@ namespace Webapi7.Repository
 
             using (var connection = _context.CreateConnection())
             {
-               var result= await connection.ExecuteAsync(procedureName, parameters,commandType: CommandType.StoredProcedure);
+               var result = await connection.ExecuteAsync(procedureName, parameters,commandType: CommandType.StoredProcedure);
 
                 return company;
             }
+        }
+
+
+        //Implementing transaction in the code
+        public async Task AddMultipleCompanies(List<Company> company)
+        {
+            var query = "insert into companies(name,address,country) values(@name,@address,@country)";
+            using (var connection = _context.CreateConnection())
+            {
+
+                connection.Open();
+                using (var transaction = connection.BeginTransaction())
+                {
+                    foreach(var comp in company)
+                    {
+                        var parameters = new DynamicParameters();
+                        parameters.Add("name", comp.Name, DbType.String);
+                        parameters.Add("address", comp.Address, DbType.String);
+                        parameters.Add("country", comp.Country, DbType.String);
+
+                        var result = await connection.ExecuteAsync(query, parameters, transaction: transaction);
+
+                       
+                        
+                    }
+                    transaction.Commit();
+                    
+                }
+            }
+
         }
 
         //delete the company

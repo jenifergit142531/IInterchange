@@ -144,5 +144,21 @@ namespace Webapi7.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+
+        [HttpPost("transact")]
+        public async Task<IActionResult> AddMultipleCompany(List<Company> company)
+        {
+
+            try
+            {
+                await _companyRepository.AddMultipleCompanies(company);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
