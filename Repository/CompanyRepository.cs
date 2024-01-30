@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using Webapi7.Context;
@@ -13,6 +14,33 @@ namespace Webapi7.Repository
         public CompanyRepository(DapperContext context)
         {
             _context = context;
+        }
+
+        //add company
+        public async Task<Company> AddCompany(Company company)
+        {
+            var procedureName = "usp_insert";
+            var parameters = new DynamicParameters();
+            parameters.Add("name", company.Name, DbType.String);
+            parameters.Add("address", company.Address, DbType.String);
+            parameters.Add("country", company.Country, DbType.String);
+
+            using (var connection = _context.CreateConnection())
+            {
+               var result= await connection.ExecuteAsync(procedureName, parameters,commandType: CommandType.StoredProcedure);
+
+                return company;
+            }
+        }
+
+        //delete the company
+        public async Task DeleteCompany(int id)
+        {
+            var query = "delete from companies where Id=@id";
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, new { id });
+            }
         }
 
         public async Task<IEnumerable<Company>> GetCompanies()
@@ -99,6 +127,23 @@ namespace Webapi7.Repository
                     (procedureName, parameters, commandType: CommandType.StoredProcedure);
                 return company;
 
+            }
+        }
+
+
+        //update the company 
+        public async Task UpdateCompany(int id, Company company)
+        {
+            var query = "update companies set name=@name,address=@address,country=@country where id=@id";
+            var parameters = new DynamicParameters();
+            parameters.Add("Id", id, DbType.Int32);
+            parameters.Add("name", company.Name, DbType.String);
+            parameters.Add("address", company.Address, DbType.String);
+            parameters.Add("country", company.Country, DbType.String);
+
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
             }
         }
     }

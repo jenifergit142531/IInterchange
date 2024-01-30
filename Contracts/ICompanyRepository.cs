@@ -13,5 +13,11 @@ namespace Webapi7.Contracts
 
         public Task<Company> GetEmployeeAndCompanySP(int id);
 
+        public Task DeleteCompany(int id);
+
+        public Task UpdateCompany(int id, Company company);
+
+        public Task<Company> AddCompany(Company company);
+
     }
 }

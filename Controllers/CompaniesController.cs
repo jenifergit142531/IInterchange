@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Webapi7.Contracts;
+using Webapi7.Models;
 
 namespace Webapi7.Controllers
 {
@@ -91,7 +92,57 @@ namespace Webapi7.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
 
+        public async Task<IActionResult> DeleteCompany(int id)
+        {
 
+            try
+            {
+                var companies = await _companyRepository.GetCompanyById(id);
+                if (companies == null)
+                    return NotFound();
+                await _companyRepository.DeleteCompany(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+
+        public async Task<IActionResult>UpdateCompany(int id,Company company)
+        {
+
+            try
+            {
+                var companies = await _companyRepository.GetCompanyById(id);
+                if (companies == null)
+                    return NotFound();
+                await _companyRepository.UpdateCompany(id, company);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetEmployeeByCompanyMapping(Company company)
+        {
+
+            try
+            {
+                var companies = await _companyRepository.AddCompany(company);
+                return Ok(companies);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
