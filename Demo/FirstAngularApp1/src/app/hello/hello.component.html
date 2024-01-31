@@ -1,0 +1,11 @@
+<div>
+    <h2>{{message}}</h2>
+    <p>Counter : {{count}}</p>
+
+    <button (click)="showMessage()">Show Message</button>
+    <button (click)=" incrementCounter()">Increment the Counter</button>
+</div>
+<div>
+    <input type="text" placeholder="enter your name" [(ngModel)]="userInput">
+   <P>Greetings : {{userInput}}</P>
+</div>

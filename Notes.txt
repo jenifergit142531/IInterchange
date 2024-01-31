@@ -1,0 +1,162 @@
+
+
+Agenda :
+
+- Setting up the environment
+- Introduction to angular
+- Create a first angular application
+- Understanding the folder structure
+- Angular component
+- Data Binding
+
+Setting up the environment : 
+
+Install Node js :
+
+https://nodejs.org/en/download
+
+Install Node Package Manager (NPM) :
+
+npm install -g npm
+
+update npm :(update all packages)
+
+npm update 
+
+check npm version : npm -version
+node version : node -v
+
+Install angular CLI :
+
+npm install -g @angular/cli
+
+update angular to latest version :
+
+npm install -g @angular/cli@latest
+
+Check the angular version :
+
+ng version
+
+
+INSTALLATION :
+
+Node --- npm ---angular
+
+NPM : Node package Manager
+
+Roles :
+
+- Set up the run time environment
+- Package management
+- Dependency management 
+
+package.json 
+
+- version control
+- cli
+
+Introduction :
+
+Angular is a front end framework
+- Open source 
+
+- easy to build mobile and web applications
+- building single page application 
+
+React is a library
+
+Key features :
+
+- Component based architecture
+- Module support
+- Template - HTML & CSS
+- Data Binding
+- Directives
+- Services and dependency injection
+- Routing
+
+Execution command :
+
+ng build : compiles the angular application 
+
+ng run : run the application
+
+ng serve : it will execute the application and also watches for changes
+
+npm start : not recommended - Javascript application 
+
+
+Understanding the folder structure
+
+
+
+/* this id for understanding 
+
+public static void addition()
+{
+  // reusable function
+
+}
+
+appcomponent (contructor injection  addition())
+hellocomponent(contructor injection)
+contactcomponent(contructor injection)
+
+*/
+
+Component :
+
+
+Commands :
+
+ng g c <componentname>
+ng generate component <componentname>
+ng generate c <componentname>
+
+What is a component ?
+
+- Building block of an angular application
+
+1. Class
+
+@Component - will mark the class as component(@ - decorator)
+
+files
+
+component.ts
+component.CSS
+component.HTML
+component.spec.ts
+
+Template - inline Template and Template URL
+
+Styles - inline styles and Styles URL
+
+selector : component name 
+
+Class definition :
+
+- You can implement lifecycle hooks
+ngOnInit().....
+
+- You can create constructor
+- You can handle exceptions
+- Contain multiple methods
+- variable declarations 
+
+code + template + metadata ( data about the data )
+
+int - int bytes (16,32,64)
+
+Data binding :
+
+One way data binding  - String interpolation
+
+from ts(class/model)---> html(view)
+
+two way data binding :
+
+- import the package formsmodule - [(ngmodel)]
+
+
