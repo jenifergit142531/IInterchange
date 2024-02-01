@@ -1,0 +1,63 @@
+<div>
+   <h3>Property Price Validation</h3>
+   <label for="propertyname">Enter property Name :</label>
+   <input id="propname" type="string"/>
+   <label for="propprice">Enter property Price :</label>
+   <input id="propprice" type="number" [(ngModel)]="price"/>
+</div>
+<div *ngIf="CheckPropertyPrice();then thenblock else elseblock"></div>
+    <ng-template #thenblock>
+     <div>
+        <h3>then block executing</h3>
+     </div>
+
+    </ng-template>
+
+    <ng-template #elseblock>
+        <div>
+            <h3>else block executing</h3>
+         </div>
+    </ng-template>
+    
+
+
+<!--<table>
+    <thead>
+        <tr>
+            <th>Property Id</th>
+            <th>Property Name</th>
+            <th>Price</th>
+            <th>Agent Name</th>
+            <th>Availability</th>
+            <th>Last Updated Date</th>
+            <th>Index</th>
+            <th>IsFirst</th>
+            <th>IsLast</th>
+            <th>IsOdd</th>
+            <th>IsEven</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let prop of PropShop; let i=index;
+      let isFirst=first;let isLast=last; let isOdd=odd;let isEven=even'>
+            <td>{{prop.Pid}}</td>
+            <td>{{prop.PropName}}</td>
+            <td>{{prop.Price}}</td>
+            <td>{{prop.Agent}}</td>
+            <td>{{prop.Availability}}</td>
+            <td>{{prop.LastUpdatedDate}}</td>
+            <td>{{i}}</td>
+            <td>{{isFirst}}</td>
+            <td>{{isLast}}</td>
+            <td>{{isOdd}}</td>
+            <td>{{isEven}}</td>
+
+            
+        </tr>
+
+        <tr *ngif="!PropShop || PropShop.length==0">
+        No Property to display
+        </tr>
+    </tbody>
+</table>
+-->

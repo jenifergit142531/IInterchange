@@ -18,3 +18,14 @@ Agenda :
 Property binding :bind the values of component or model properties to the HTML Element.
 
 [property]='expression'
+
+
+Angular directives :
+
+- change behaviour / appearance / layout of the DOM element.
+
+Types of directives
+
+1.Structural - NgFor,NgIf,NgSwitch
+2. Attribute - [ngClass] and [ngStyle]
+3.Component - @Component
