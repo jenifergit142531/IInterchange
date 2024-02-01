@@ -1,0 +1,20 @@
+
+
+Agenda :
+
+* Data binding
+- Property binding
+- Attribute binding
+- class binding
+- style binding
+- event binding
+* Angular directives 
+- ngFor
+- ngIf
+- ngSwitch
+- ngStyle
+- ngClass
+
+Property binding :bind the values of component or model properties to the HTML Element.
+
+[property]='expression'

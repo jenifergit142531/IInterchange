@@ -1,0 +1,91 @@
+
+
+<h3> Style Binding </h3>
+<div>
+    <button style="color:red" [style.font-weight]="IsBold?'bold':'normal'"
+    [style.font-size.px]="fontsize">
+    click me </button>
+
+    <button [ngStyle]="AddMultipleStyles()">this is style binding</button></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h3>Class Binding</h3>
+<div>
+<button class="colorClass" [ngClass]="AddCssClassess()">Click here</button>
+</div>
+
+
+
+
+
+
+
+
+<table border="2">
+    <thead>
+        <tr>
+            <th >{{tableheader}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td [attr.rowspan]='rowspan'>Student Name</td>
+            <td>{{name}}</td>
+        </tr>
+        <tr>
+            <td [attr.colspan]='columnspan'>Student Age</td>
+            <td>{{age}}</td>
+        </tr>
+        <tr>
+            <td>Grade</td>
+            <td>{{grade}}</td>
+        </tr>
+        <tr>
+            <td>Contact Number</td>
+            <td>{{mobile}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{gender}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3> Attribute Binding</h3>
+<p [attr.color]="textColour">This text has a dynamic class</p>
+<button (click)="togglecolour()">Click</button>
+
+
+
+
+
+
+
+
+
+
+<div>
+Student Name : <span [innerHTML]="name"></span><br>
+Age : <span [innerText]="age"></span><br>
+Grade : <span [innerHTML]="grade"></span>
+<br>
+<br>
+<br>
+Website :<img [src]="image">
+</div>
+
+<div>
+    <img src="{{image}}">
+    <p>{{name}}</p>
+</div>
+-->
