@@ -1,4 +1,24 @@
-<div>
+<h3>NG SWITCH Directive</h3>
+<select (change)="setDropDownValue($event)">
+    <option value="">select</option>
+    <option value="IN">IN</option>
+    <option value="US">US</option>
+    <option value="UK">UK</option>
+   
+</select>
+
+<H4>You have selected :</H4>
+<div [ngSwitch]='dropdownvalue'>
+    <h3 *ngSwitchCase="'IN'">India</h3>
+    <h3 *ngSwitchCase="'US'">united States</h3>
+    <h3 *ngSwitchCase="'UK'">united Kingdom</h3>
+    <h3 *ngSwitchDefault="">You have not selected any country</h3>
+
+</div>
+
+
+
+<!--<div>
    <h3>Property Price Validation</h3>
    <label for="propertyname">Enter property Name :</label>
    <input id="propname" type="string"/>
@@ -21,7 +41,7 @@
     
 
 
-<!--<table>
+<table>
     <thead>
         <tr>
             <th>Property Id</th>

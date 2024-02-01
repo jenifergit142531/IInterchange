@@ -33,4 +33,10 @@ CheckPropertyPrice():boolean{
   
   return this.price>5000;
 }
+
+public dropdownvalue="";
+setDropDownValue(dp:any)
+{
+  this.dropdownvalue=dp.target.value;
+}
 }
