@@ -1,6 +1,54 @@
 
+<h3>Event Binding</h3>
+<button (click)="onClick()">Click</button>
 
-<h3> Style Binding </h3>
+<table border="2">
+    <thead>
+        <tr>
+            <th >{{tableheader}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td >Student Name</td>
+            <td>{{name}}</td>
+        </tr>
+        <tr>
+            <td >Student Age</td>
+            <td>{{age}}</td>
+        </tr>
+        <tr>
+            <td>Grade</td>
+            <td>{{grade}}</td>
+        </tr>
+        <tr *ngIf="showDetails">
+            <td>Contact Number</td>
+            <td>{{mobile}}</td>
+        </tr>
+        <tr *ngIf="showDetails">
+            <td>Gender</td>
+            <td>{{gender}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="toggle()">{{showDetails ? 'Hide':'Show'}}
+Student Details
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h3> Style Binding </h3>
 <div>
     <button style="color:red" [style.font-weight]="IsBold?'bold':'normal'"
     [style.font-size.px]="fontsize">
@@ -19,7 +67,7 @@
 
 
 
-<!--<h3>Class Binding</h3>
+<h3>Class Binding</h3>
 <div>
 <button class="colorClass" [ngClass]="AddCssClassess()">Click here</button>
 </div>
