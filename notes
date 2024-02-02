@@ -1,0 +1,15 @@
+
+Agenda :
+
+- Routing and navigation
+* Router Module
+* Dynamic routing
+- Pipes
+* Built in pipes 
+* Custom pipes
+- Services
+- Dependency Injection 
+
+Routing :
+
+- navigate between pages and display appropriate component on the browser
