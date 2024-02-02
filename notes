@@ -13,3 +13,38 @@ Agenda :
 Routing :
 
 - navigate between pages and display appropriate component on the browser
+
+full match : /home
+prefix : /home/1
+
+wildcard : **
+
+Pipes :(|)
+
+- Transform your data into specific format
+
+Structure :
+
+input data ---> | ------>Transformed data
+
+1.Built in pipes
+
+- Lower case and upper case
+- Number pipe
+- currency pipe
+- date pipe
+- percent pipe
+
+eg:
+jeni --->|(touppercase)----> JENI
+
+18 ----> | ---> $18
+
+2/2/2024 12:59:00:00 ---> | ----> 2024/2/2
+
+2. Custom Pipe 
+
+eg :
+jeni--->(|)----> Miss.Jeni
+
+

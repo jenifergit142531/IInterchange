@@ -3,19 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { ErrorComponent } from './error/error.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   {
-    path:'',redirectTo:'login',pathMatch:'full'
+    path:'',redirectTo:'home',pathMatch:'full'
+  },
+  { 
+    path:'pipe',component:PipeComponent
   },
   { 
     path:'home',component:HomeComponent
   },
   {
-    path:'contact',component:ContactComponent
+    path:'contact',component:ContactComponent,pathMatch:'prefix'
   },
   {
     path:'login',component:LoginComponent
+  },
+  {
+    path:'**',component:ErrorComponent
   }
 
 ];

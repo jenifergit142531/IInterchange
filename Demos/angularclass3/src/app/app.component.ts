@@ -9,17 +9,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'angularclass3';
 
-  constructor(private router:Router){}
-
-  getHome()
-  {
-    this.router.navigate(['home']);
-  }
-
-  getContact()
-  {
-    this.router.navigate(['contact']);
-  }
   
   
 }
