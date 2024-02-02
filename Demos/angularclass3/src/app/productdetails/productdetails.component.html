@@ -1,1 +1,21 @@
-<p>productdetails works!</p>
+<h1>Product Details</h1>
+
+<button type="button" (click)="getProduct()">Product Details</button>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of pro">
+                <td>{{p.productId}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -48,3 +48,18 @@ eg :
 jeni--->(|)----> Miss.Jeni
 
 
+Services :
+
+- Reusable piece of code
+- Independent of components
+- Business logic / data in the services can be shared across components
+- Encapsulation (data & methods)
+
+Advantage :
+
+- Reusable
+- easier to debug /test
+
+ng g s products
+
+

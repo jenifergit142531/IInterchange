@@ -5,10 +5,14 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 const routes: Routes = [
   {
     path:'',redirectTo:'home',pathMatch:'full'
+  },
+  { 
+    path:'get',component:ProductdetailsComponent
   },
   { 
     path:'pipe',component:PipeComponent

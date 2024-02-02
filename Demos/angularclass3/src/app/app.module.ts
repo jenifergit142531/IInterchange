@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { EmployeeTitlePipe } from './employee-title.pipe';
+import { ProductsService } from './products.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { EmployeeTitlePipe } from './employee-title.pipe';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
