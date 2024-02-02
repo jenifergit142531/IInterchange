@@ -9,6 +9,7 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { EmployeeTitlePipe } from './employee-title.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PipeComponent } from './pipe/pipe.component';
     ProductdetailsComponent,
     LoginComponent,
     ErrorComponent,
-    PipeComponent
+    PipeComponent,
+    EmployeeTitlePipe
   ],
   imports: [
     BrowserModule,

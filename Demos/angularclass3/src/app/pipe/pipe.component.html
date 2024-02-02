@@ -14,7 +14,7 @@
         <tbody>
             <tr *ngFor='let e of employees'>
                 <td>{{e.empid}}</td>
-                <td>{{e.empname | uppercase}}</td>
+                <td>{{e.empname | employeeTitle:e.gender}}</td>
                 <td>{{e.role | lowercase}}</td>
                 <td>{{e.gender}}</td>
                 <td>{{e.doj | date}}</td>
