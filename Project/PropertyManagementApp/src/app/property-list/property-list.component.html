@@ -1,5 +1,8 @@
-<h1>FERALUXE</h1>
-<p>Property Management Company</p>
+<h1 [align]="'center'">FERA LUXE</h1>
+<p [align]="'center'">Property Management Company</p>
+
+<p-button label="Create Property" [routerLink]="'/properties/create'"></p-button>
+
 <p-table [value]="properties" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
@@ -7,6 +10,7 @@
             <th>Name</th>
             <th>Type</th>
             <th>Price</th>
+            
         </tr>
    
     </ng-template>
@@ -17,6 +21,8 @@
             <td>{{property.name}}</td>
             <td>{{property.type}}</td>
             <td>{{property.price}}</td>
+            <td><p-button label="Edit" severity="warning" ></p-button></td>
+            <td><p-button label="Delete" severity="danger"></p-button></td>
         </tr>
  </ng-template>
 </p-table>

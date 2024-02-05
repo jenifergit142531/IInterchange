@@ -8,6 +8,8 @@ import { PropertyCreateComponent } from './property-create/property-create.compo
 import { PropertyEditComponent } from './property-edit/property-edit.component';
 import { TableModule } from 'primeng/table';
 import { PropertyService } from './property.service';
+import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { PropertyService } from './property.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TableModule
+    TableModule,
+    ButtonModule,
+    FormsModule
   ],
   providers: [PropertyService],
   bootstrap: [AppComponent]

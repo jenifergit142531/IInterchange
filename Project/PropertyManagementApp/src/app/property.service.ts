@@ -20,4 +20,8 @@ export class PropertyService {
   getPropertyById(id:number):any{
     return this.properties.find(property=>property.id===id);
   }
+
+  addProperty(property:any):void{
+    this.properties.push({...property,id:this.properties.length+1});
+  }
 }
