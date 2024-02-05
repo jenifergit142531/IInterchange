@@ -32,4 +32,8 @@ export class PropertyService {
       this.properties[index]=updatedProperty;
     }
   }
+
+  deleteProperty(id:number):void{
+    this.properties=this.properties.filter(property=>property.id!==id);
+  }
 }

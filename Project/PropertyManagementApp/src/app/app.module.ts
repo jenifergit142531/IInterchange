@@ -12,12 +12,18 @@ import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { TabViewModule } from 'primeng/tabview';
+import { HomeComponent } from './home/home.component';
+import { EnquireComponent } from './enquire/enquire.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     PropertyListComponent,
     PropertyCreateComponent,
-    PropertyEditComponent
+    PropertyEditComponent,
+    HomeComponent,
+    EnquireComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,8 @@ import { TabMenuModule } from 'primeng/tabmenu';
     ButtonModule,
     FormsModule,
     InputTextModule,
-    TabMenuModule
+    TabMenuModule,
+    TabViewModule
   ],
   providers: [PropertyService],
   bootstrap: [AppComponent]

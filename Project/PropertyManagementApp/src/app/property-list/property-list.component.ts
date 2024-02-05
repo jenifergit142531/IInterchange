@@ -20,4 +20,9 @@ export class PropertyListComponent implements OnInit {
      this.router.navigate([`properties/edit/${id}`]);
    }
 
+   deleteProperty(id:number):void{
+    this.propertyService.deleteProperty(id);
+    this.properties=this.propertyService.getProperties();
+   }
+
 }
