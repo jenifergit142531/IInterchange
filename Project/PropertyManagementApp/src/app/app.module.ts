@@ -10,6 +10,8 @@ import { TableModule } from 'primeng/table';
 import { PropertyService } from './property.service';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { TabMenuModule } from 'primeng/tabmenu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     TableModule,
     ButtonModule,
-    FormsModule
+    FormsModule,
+    InputTextModule,
+    TabMenuModule
   ],
   providers: [PropertyService],
   bootstrap: [AppComponent]

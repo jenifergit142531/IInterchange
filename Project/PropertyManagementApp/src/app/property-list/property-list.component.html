@@ -21,7 +21,7 @@
             <td>{{property.name}}</td>
             <td>{{property.type}}</td>
             <td>{{property.price}}</td>
-            <td><p-button label="Edit" severity="warning" ></p-button></td>
+            <td><p-button label="Edit" severity="warning" (click)="editProperty(property.id)" ></p-button></td>
             <td><p-button label="Delete" severity="danger"></p-button></td>
         </tr>
  </ng-template>

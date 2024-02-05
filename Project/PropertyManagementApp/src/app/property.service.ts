@@ -24,4 +24,12 @@ export class PropertyService {
   addProperty(property:any):void{
     this.properties.push({...property,id:this.properties.length+1});
   }
+
+  updateProperty(updatedProperty:any):void{
+    const index=this.properties.findIndex(property=>property.id===updatedProperty.id);
+    if(index!=-1)
+    {
+      this.properties[index]=updatedProperty;
+    }
+  }
 }

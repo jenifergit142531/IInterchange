@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PropertyService } from '../property.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-property-list',
@@ -9,10 +10,14 @@ import { PropertyService } from '../property.service';
 export class PropertyListComponent implements OnInit {
 
   properties:any[]=[];
-  constructor(private propertyService:PropertyService){}
+  constructor(private propertyService:PropertyService,private router:Router){}
 
    ngOnInit(): void {
        this.properties=this.propertyService.getProperties();
+   }
+
+   editProperty(id:number):void{
+     this.router.navigate([`properties/edit/${id}`]);
    }
 
 }
