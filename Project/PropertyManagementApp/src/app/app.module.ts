@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { PropertyListComponent } from './property-list/property-list.component';
 import { PropertyCreateComponent } from './property-create/property-create.component';
 import { PropertyEditComponent } from './property-edit/property-edit.component';
-
+import { TableModule } from 'primeng/table';
+import { PropertyService } from './property.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +17,10 @@ import { PropertyEditComponent } from './property-edit/property-edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TableModule
   ],
-  providers: [],
+  providers: [PropertyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

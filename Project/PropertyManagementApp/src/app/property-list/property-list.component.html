@@ -1,1 +1,22 @@
-<p>property-list works!</p>
+<h1>FERALUXE</h1>
+<p>Property Management Company</p>
+<p-table [value]="properties" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Property Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+   
+    </ng-template>
+
+    <ng-template pTemplate="body" let-property>
+      <tr>
+            <td>{{property.id}}</td>
+            <td>{{property.name}}</td>
+            <td>{{property.type}}</td>
+            <td>{{property.price}}</td>
+        </tr>
+ </ng-template>
+</p-table>
