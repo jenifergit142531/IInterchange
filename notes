@@ -1,0 +1,43 @@
+
+
+Agenda : Creating the project using Mock data
+
+Objectives : 
+
+Creating the Angular project that perform CRUD operation for the Project management portal.The user should be able to perform add\delete\update\get the property details.
+
+Tools :
+
+- Angular 17
+
+Modules :
+
+- PropertyList
+- PropertyCreate
+- PropertyEdit
+- PropertyDelete
+
+Components :
+
+ng g c PropertyList
+ng g c PropertyCreate
+ng g c PropertyEdit
+
+
+Services :
+
+ng generate service property 
+
+Routing : 
+
+const routes: Routes = [
+  { path:'properties',component:PropertyListComponent },
+  { path:'properties/create',component:PropertyCreateComponent },
+  { path:'properties/edit/:id',component:PropertyEditComponent },
+  {path:'',redirectTo:'/properties',pathMatch:'full'},
+  
+];
+
+app.component.html:
+
+<router-outlet></router-outlet>
