@@ -7,7 +7,8 @@ import { HousecreateComponent } from './housecreate/housecreate.component';
 import { HouselistComponent } from './houselist/houselist.component';
 import { HouseeditComponent } from './houseedit/houseedit.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

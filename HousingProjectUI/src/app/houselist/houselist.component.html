@@ -1,1 +1,26 @@
-<p>houselist works!</p>
+<p>Luxor Holiday Homes</p>
+<p-button label="Add Holiday Houses" severity="success"></p-button>
+<p-table [value]="houses" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>House Name</th>
+            <th>Price</th>
+            <th>Age</th>
+            <th>Image</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-h>
+        <tr>
+            <td>{{ h.name }}</td>
+            <td>{{ h.price }}</td>
+            <td>{{ h.age }}</td>
+            <td>
+            <img *ngIf="h.imageurl" [src]="h.imageurl" alt="House Image" height="50" width="50">    
+            </td>
+            <p-button label="Edit" severity="help"></p-button>
+         <p-button label="Delete" severity="danger"></p-button>
+        </tr>
+    </ng-template>
+</p-table>
+
+
