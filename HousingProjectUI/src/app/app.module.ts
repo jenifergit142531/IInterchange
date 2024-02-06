@@ -9,6 +9,10 @@ import { HouseeditComponent } from './houseedit/houseedit.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { ImageModule } from 'primeng/image';
+import { NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,9 @@ import { ButtonModule } from 'primeng/button';
     AppRoutingModule,
     HttpClientModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    ImageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

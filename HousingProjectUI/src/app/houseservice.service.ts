@@ -15,4 +15,10 @@ export class HouseserviceService {
   {
      return this.http.get<House[]>(this.baseApiUrl+'/api/houses');
   }
+
+  addHousing(addHousingRequest:House):Observable<House[]>
+  {
+    addHousingRequest.id='00000000-0000-0000-0000-000000000000';
+    return this.http.post<House[]>(this.baseApiUrl+'/api/houses',addHousingRequest);
+  }
 }

@@ -1,5 +1,5 @@
 <p>Luxor Holiday Homes</p>
-<p-button label="Add Holiday Houses" severity="success"></p-button>
+<p-button label="Add Holiday Houses" severity="success" [routerLink]="'/create'"></p-button>
 <p-table [value]="houses" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
@@ -13,14 +13,17 @@
         <tr>
             <td>{{ h.name }}</td>
             <td>{{ h.price }}</td>
-            <td>{{ h.age }}</td>
-            <td>
-            <img *ngIf="h.imageurl" [src]="h.imageurl" alt="House Image" height="50" width="50">    
-            </td>
+            <td>{{ h.age}}</td>
+            <td><p-image [src]='h.imageurl' alt="Image" width="250"></p-image> </td>
+         
+            
             <p-button label="Edit" severity="help"></p-button>
          <p-button label="Delete" severity="danger"></p-button>
-        </tr>
+       
+   
+
     </ng-template>
 </p-table>
+
 
 
