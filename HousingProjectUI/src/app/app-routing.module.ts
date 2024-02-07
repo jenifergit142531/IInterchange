@@ -7,7 +7,7 @@ import { HouseeditComponent } from './houseedit/houseedit.component';
 const routes: Routes = [
   {path:'hlist',component:HouselistComponent},
   {path:'create',component:HousecreateComponent},
-  {path:'house/edit/:id',component:HouseeditComponent},
+  {path:'edit/:id',component:HouseeditComponent},
   {path:'',redirectTo:'hlist',pathMatch:"full"}
 ];
 

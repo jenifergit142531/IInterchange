@@ -16,9 +16,9 @@
             <td>{{ h.age}}</td>
             <td><img [src]="h.imageurl" alt="house image"> </td>
          
-            <a [routerLink]="['/house','edit',h.id]">Edit</a>
-        <!-- <p-button label="Edit" severity="help" routerLink="/edit/:id"></p-button>-->
-         <p-button label="Delete" severity="danger"></p-button>
+          
+         <p-button label="Edit" severity="help" [routerLink]="'edit/id'"></p-button>
+        
        
    
 

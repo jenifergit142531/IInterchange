@@ -31,5 +31,11 @@ export class HouseserviceService {
   {
       return this.http.put<House[]>(this.baseApiUrl+'/api/houses/'+id,updateHouseDet);
   }
+
+
+  deleteHousing(id:string):Observable<House>
+  {
+    return this.http.delete<House>(this.baseApiUrl+'/api/houses/'+id);
+  }
   
 }

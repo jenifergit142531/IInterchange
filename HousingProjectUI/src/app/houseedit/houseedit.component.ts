@@ -35,7 +35,7 @@ constructor(private houseService:HouseserviceService,private router:Router,priva
       }
       
     }
-   });
+   })
   }
 
   updateHouse()
@@ -46,6 +46,21 @@ constructor(private houseService:HouseserviceService,private router:Router,priva
       {
         this.router.navigate(['hlist']);
         console.log(response);
+      },
+      error:(response)=>
+      {
+        console.log(response);
+      }
+    });
+  }
+
+  deleteHouse(id:string)
+  {
+    this.houseService.deleteHousing(id)
+    .subscribe({
+      next:(response)=>
+      {
+        this.router.navigate(['hlist']);
       },
       error:(response)=>
       {
