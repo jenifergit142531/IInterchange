@@ -14,10 +14,10 @@
             <td>{{ h.name }}</td>
             <td>{{ h.price }}</td>
             <td>{{ h.age}}</td>
-            <td><p-image [src]='h.imageurl' alt="Image" width="250"></p-image> </td>
+            <td><img [src]="h.imageurl" alt="house image"> </td>
          
-            
-            <p-button label="Edit" severity="help"></p-button>
+            <a [routerLink]="['/house','edit',h.id]">Edit</a>
+        <!-- <p-button label="Edit" severity="help" routerLink="/edit/:id"></p-button>-->
          <p-button label="Delete" severity="danger"></p-button>
        
    

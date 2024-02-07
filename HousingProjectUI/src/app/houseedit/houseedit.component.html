@@ -1,1 +1,33 @@
-<p>houseedit works!</p>
+<h1>Create Holiday homes </h1>
+<div>
+   <form #form="ngForm" (ngSubmit)="updateHouse()">
+    <div>
+        <label>Id</label>
+        <input type="text" class="form-control" id="id" readonly name="id" [(ngModel)]="editBookDetails.id"/>
+        </div>
+    <div>
+    <label>House Name</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="editBookDetails.name"/>
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="editBookDetails.price"/>
+        </div>
+        <div>
+            <label>Age</label>
+            <input type="number" class="form-control" id="age" name="age" [(ngModel)]="editBookDetails.age"/>
+            </div>
+            <div>
+                <label>Image Url</label>
+                <input type="text" class="form-control" id="imageurl" name="imageurl" [(ngModel)]="editBookDetails.imageurl"/>
+                </div>
+
+                <div>
+                    <p-button label="Edit" severity="primary" type="ngSubmit"></p-button>
+                </div>
+   </form>
+</div>
+
+
+
+

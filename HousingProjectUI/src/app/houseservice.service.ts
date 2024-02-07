@@ -21,4 +21,15 @@ export class HouseserviceService {
     addHousingRequest.id='00000000-0000-0000-0000-000000000000';
     return this.http.post<House[]>(this.baseApiUrl+'/api/houses',addHousingRequest);
   }
+
+  getHouseById(id:string):Observable<House>
+  {
+     return this.http.get<House>(this.baseApiUrl+'/api/houses/'+id);
+  }
+
+  updateHousingDetails(id:string,updateHouseDet:House):Observable<House[]>
+  {
+      return this.http.put<House[]>(this.baseApiUrl+'/api/houses/'+id,updateHouseDet);
+  }
+  
 }
