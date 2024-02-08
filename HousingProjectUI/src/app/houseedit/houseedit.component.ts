@@ -10,26 +10,34 @@ import { House } from '../house';
 })
 export class HouseeditComponent implements OnInit {
 
-editBookDetails:House={
-id:'',
+editHouseDetails:House={
+houseid:'',
 name:'',
 price:0,
 age:0,
 imageurl:''
 };
 
+
+
+
 constructor(private houseService:HouseserviceService,private router:Router,private route:ActivatedRoute){}
   ngOnInit(): void {
-   this.route.paramMap.subscribe({
+
+   
+    
+     
+    this.route.paramMap.subscribe({
     next:(params)=>
     {
-      const id=params.get('id');
+      const id=params.get('houseid');
       if(id)
       {
-        this.houseService.getHouseById(id)
+        this.houseService.getHouseById('id')
         .subscribe({
-          next:(response)=>{
-            this.editBookDetails=response;
+          next:(housing)=>{
+           this.editHouseDetails=housing;
+            console.log(housing);
           }
         })
       }
@@ -40,7 +48,7 @@ constructor(private houseService:HouseserviceService,private router:Router,priva
 
   updateHouse()
   {
-    this.houseService.updateHousingDetails(this.editBookDetails.id,this.editBookDetails)
+    this.houseService.updateHousingDetails(this.editHouseDetails.houseid,this.editHouseDetails)
     .subscribe({
       next:(response)=>
       {

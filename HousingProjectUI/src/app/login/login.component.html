@@ -1,0 +1,15 @@
+<p>login </p>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+    <label>username</label>
+    <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username" required/>
+    </div>
+    <div>
+    <label>password</label>
+    <input type="text" class="form-control" id="password" name="password" [(ngModel)]="password" required=""/>
+    </div>
+    <div>
+        <p-button label="Login" severity="primary" type="ngSubmit"></p-button>
+    </div>
+    </form>
+

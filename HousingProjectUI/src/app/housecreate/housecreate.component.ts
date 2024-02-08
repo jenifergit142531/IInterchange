@@ -11,7 +11,7 @@ import { House } from '../house';
 export class HousecreateComponent implements OnInit {
 
   addHousingRequest:House={
-    id:'',
+    houseid:'',
     name:'',
     price:0,
     age:0,

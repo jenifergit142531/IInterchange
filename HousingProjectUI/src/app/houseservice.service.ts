@@ -9,6 +9,11 @@ import { House } from './house';
 export class HouseserviceService {
 
   baseApiUrl:string="https://localhost:7186";
+
+  baseUrl:string="https://localhost:7186/api/houses";
+
+  baseUrlAuth:string="https://localhost:7186/api/auth";
+
   constructor(private http:HttpClient) { }
 
   getAllHouses():Observable<House[]>
@@ -18,12 +23,14 @@ export class HouseserviceService {
 
   addHousing(addHousingRequest:House):Observable<House[]>
   {
-    addHousingRequest.id='00000000-0000-0000-0000-000000000000';
+    addHousingRequest.houseid='00000000-0000-0000-0000-000000000000';
     return this.http.post<House[]>(this.baseApiUrl+'/api/houses',addHousingRequest);
   }
 
   getHouseById(id:string):Observable<House>
   {
+    
+    
      return this.http.get<House>(this.baseApiUrl+'/api/houses/'+id);
   }
 
@@ -37,5 +44,14 @@ export class HouseserviceService {
   {
     return this.http.delete<House>(this.baseApiUrl+'/api/houses/'+id);
   }
+
+  getDetails(id:string):Observable<House>{
+    const url=`${this.baseUrl}/${id}}`;
+    return this.http.get<House>(url);
+  }
   
+  login(username:string,password:string)
+  {
+    return this.http.post<any>(`${this.baseUrlAuth}/login`,{username,password});
+  }
 }

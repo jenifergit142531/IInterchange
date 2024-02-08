@@ -12,13 +12,17 @@ import { ButtonModule } from 'primeng/button';
 import { ImageModule } from 'primeng/image';
 import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HousecreateComponent,
     HouselistComponent,
-    HouseeditComponent
+    HouseeditComponent,
+    DetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

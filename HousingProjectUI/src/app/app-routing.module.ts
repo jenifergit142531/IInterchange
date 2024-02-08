@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { HouselistComponent } from './houselist/houselist.component';
 import { HousecreateComponent } from './housecreate/housecreate.component';
 import { HouseeditComponent } from './houseedit/houseedit.component';
+import { DetailsComponent } from './details/details.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'hlist',component:HouselistComponent},
   {path:'create',component:HousecreateComponent},
   {path:'edit/:id',component:HouseeditComponent},
+  {path:'details/:id',component:DetailsComponent},
+  {path:'login',component:LoginComponent},
   {path:'',redirectTo:'hlist',pathMatch:"full"}
 ];
 

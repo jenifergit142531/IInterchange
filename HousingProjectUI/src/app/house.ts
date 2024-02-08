@@ -1,5 +1,5 @@
 export interface House {
-    id:string,
+    houseid:string,
     name:string,
     price:number,
     age:number,
