@@ -255,3 +255,4 @@ C:\Users\JeniferY\Desktop\iinterchange\Console\HousingProjectAPI\HousingProjectA
 C:\Users\JeniferY\Desktop\iinterchange\Console\HousingProjectAPI\HousingProjectAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
 C:\Users\JeniferY\Desktop\iinterchange\Console\HousingProjectAPI\HousingProjectAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\JeniferY\Desktop\iinterchange\Console\HousingProjectAPI\HousingProjectAPI\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\JeniferY\Desktop\iinterchange\Console\HousingProjectAPI\HousingProjectAPI\obj\Debug\net8.0\HousingProjectAPI.sourcelink.json
