@@ -5,6 +5,7 @@ import { HousecreateComponent } from './housecreate/housecreate.component';
 import { HouseeditComponent } from './houseedit/houseedit.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 
 const routes: Routes = [
   {path:'hlist',component:HouselistComponent},
@@ -12,6 +13,8 @@ const routes: Routes = [
   {path:'edit/:id',component:HouseeditComponent},
   {path:'details/:id',component:DetailsComponent},
   {path:'login',component:LoginComponent},
+  {path:'temp',component:TemplatedrivenComponent},
+
   {path:'',redirectTo:'hlist',pathMatch:"full"}
 ];
 

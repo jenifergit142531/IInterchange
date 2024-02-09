@@ -14,6 +14,10 @@ import { NgForm } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveComponent } from './reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { LoginComponent } from './login/login.component';
     HouselistComponent,
     HouseeditComponent,
     DetailsComponent,
-    LoginComponent
+    LoginComponent,
+    TemplatedrivenComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,

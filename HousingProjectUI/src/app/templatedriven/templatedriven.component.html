@@ -1,0 +1,67 @@
+<p>templatedriven works!</p>
+
+<div>
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && OnSubmit()" novalidate>
+        <div>
+            <label>
+                User Name
+            </label>
+            <input type="text" class="form-control" name="username" [(ngModel)]="form.username"
+            required
+            minlength="6"
+            maxlength="20"
+            #username="ngModel"
+            [ngClass]="{'is-invalid':f.submitted && username.errors}"       
+            />
+            <div *ngIf="f.submitted &&  email.errors" class="invalid-feedback">
+                <div *ngIf="email.errors['required']"> *username is required </div>
+                <div *ngIf="email.errors['minlength']"> *User name must have atleast 6 characters</div>
+                <div *ngIf="email.errors['maxlength']"> *User name must not exceed 20 characters</div>
+            </div>
+
+        </div>
+        <div>
+            <label>
+                Email Address
+            </label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="form.email"
+            required
+            email     
+            #email="ngModel"
+            [ngClass]="{'is-invalid':f.submitted && email.errors}"
+            
+            />
+
+            <div *ngIf="f.submitted &&  email.errors" class="invalid-feedback">
+            
+            <div *ngIf="email.errors['required']"> *Email id is required </div>
+            <div *ngIf="email.errors['email']"> *Email id must be in right format</div>
+            </div>
+
+        </div>
+        <div>
+            <label>
+                Password
+            </label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="form.password"
+            required
+            minlength="6"
+            maxlength="20"
+            #password="ngModel"
+            [ngClass]="{'is-invalid':f.submitted && password.errors}"
+            
+            
+            />
+
+            <div *ngIf="f.submitted &&  password.errors" class="invalid-feedback">
+                <div *ngIf="password.errors['required']"> *password is required </div>
+                <div *ngIf="password.errors['minlength']"> *password must have atleast 6 characters</div>
+                <div *ngIf="password.errors['maxlength']"> *password must not exceed 20 characters</div>
+            </div>
+
+        </div>
+
+        <button type="submit" (click)="OnSubmit()">Register</button>
+        <button type="button" (click)="onReset(f)">Reset</button>
+    </form>
+</div>
