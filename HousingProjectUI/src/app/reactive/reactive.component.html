@@ -1,1 +1,47 @@
 <p>reactive works!</p>
+<div>
+  <form [formGroup]="userform" (ngSubmit)="save()" >
+    <div>
+        <label>username</label> 
+        <input 
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="username"/>
+        <div *ngIf="userform.get('username')?.invalid && (userform.get('username')?.touched || userform.get('username')?.dirty)">
+    </div>
+    <div *ngIf="userform.get('username')?.errors?.['required']">
+        User Name is required 
+        </div>
+    </div>
+   
+      <div>
+        <label>email</label>
+        <input 
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"/>
+        <div *ngIf="userform.get('email')?.invalid && (userform.get('email')?.touched || userform.get('email')?.dirty)">
+        </div>
+        <div *ngIf="userform.get('email')?.errors?.['required']">
+            email is required 
+            </div>
+    </div>  
+       <div>
+        <label>password</label>
+        <input 
+        type="text"
+        class="form-control"
+        id="password"
+        formControlName="password"/>
+        <div *ngIf="userform.get('password')?.invalid && (userform.get('password')?.touched || userform.get('password')?.dirty)">
+        </div>
+        <div *ngIf="userform.get('password')?.errors?.['required']">
+            password is required 
+            </div>
+    </div> 
+   <button type="submit">submit</button>
+    
+    </form>
+</div>

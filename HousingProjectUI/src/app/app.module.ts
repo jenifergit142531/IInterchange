@@ -37,7 +37,8 @@ import { ReactiveComponent } from './reactive/reactive.component';
     TableModule,
     ButtonModule,
     ImageModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
