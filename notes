@@ -1,0 +1,38 @@
+
+
+Agenda :
+
+Input and Output components
+
+@Input
+
+@Output 
+
+
+Authentication Flow :
+
+- Create the AuthController with login functionality
+
+if(res==1)
+{
+    user is valid
+}
+else
+{
+    user is invalid
+}
+
+- UI :
+
+Create the service 
+
+login(uname,pwd)
+{
+
+}
+
+call the service in the component 
+
+this.ser.validate()
+
+

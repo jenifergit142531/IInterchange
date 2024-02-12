@@ -1,0 +1,26 @@
+<p>parent-customer-list works!</p>
+<br>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Customer Number</th>
+            <th>Customer Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.cusNo}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.city}}</td>
+            <td><button (click)="
+                showDetails(customer)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Details</h3>
+<app-child-customer-details [customer]="selectedCustomer"
+(customerChange)="update($event)"></app-child-customer-details>

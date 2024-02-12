@@ -1,0 +1,11 @@
+<p>child-customer-details works!</p>
+<br>
+<br>
+<label>Customer Number</label>
+<input  [(ngModel)]="customer.cusNo">
+<label>Customer Name</label>
+<input type="text" [(ngModel)]="customer.name">
+<label>Customer City</label>
+<input type="text" [(ngModel)]="customer.city">
+
+<button (click)="update()">Update Customer Details</button>
